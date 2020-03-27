@@ -1,0 +1,133 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 open_form">
+		<div class="sub_right right"> 
+			{template pk10_com_nav}
+			<div class="sub_r_open_form sub_r_open_form_10016"> {list catid=1 num=1 order=id more=1}
+				<div class="sub_mid_l">
+					<h1>北京PK拾 </h1>
+					<h2>本期第<em style="color: #ff0000" id="cterm">{$t['expect']}</em>期</h2>
+					<h3><em id="fre_info">每5分钟</em>一期,全天<em id="fre_total">179</em>期</h3>
+					<h3>当前<em id="c_now">69</em>期,剩<em id="c_less">110</em>期</h3>
+					<div class="shuang_anniu"> <span><a target="_blank" class="g_button btn_orange" href="./index.php?c=content&a=list&catid=4">开奖视频</a></span> </div>
+				</div>
+				<div class="sub_mid_c">
+					<h2>本期开奖结果：<em id="msgInfo" style="color: rgb(255, 0, 0); display: none;">...数据加载中,如不正常请手动刷新...</em></h2>
+					<div class="result"> {php $a = explode(',',$t['opencode']);}
+						<ul id="term_ball">
+							<span title="10" class="ball_pks_  ball_pks10 ball_lenght10  ">&nbsp;</span> <span title="{$a[1]}" class="ball_pks_  ball_pks{$a[1]} ball_lenght10  ">&nbsp;</span> <span title="{$a[2]}" class="ball_pks_  ball_pks{$a[2]} ball_lenght10  ">&nbsp;</span> <span title="{$a[3]}" class="ball_pks_  ball_pks{$a[3]} ball_lenght10  ">&nbsp;</span> <span title="{$a[4]}" class="ball_pks_  ball_pks{$a[4]} ball_lenght10  ">&nbsp;</span> <span title="{$a[5]}" class="ball_pks_  ball_pks{$a[5]} ball_lenght10  ">&nbsp;</span> <span title="{$a[6]}" class="ball_pks_  ball_pks{$a[6]} ball_lenght10  ">&nbsp;</span> <span title="{$a[7]}" class="ball_pks_  ball_pks{$a[7]} ball_lenght10  ">&nbsp;</span> <span title="{$a[8]}" class="ball_pks_  ball_pks{$a[8]} ball_lenght10  ">&nbsp;</span> <span title="{$a[9]}" class="ball_pks_  ball_pks{$a[9]} ball_lenght10  ">&nbsp;</span>
+						</ul>
+					</div>
+				</div>
+				<div class="sub_mid_r">
+					<h2>下期【第<em style="color: #ff0000" id="nterm">{$t['expect']+1}</em>期】</h2>
+					<h3><em style="color: #fff" id="ndate">
+						<p>02:54</p>
+						</em></h3>
+					<div class="btn_bar">
+						<div style="display: none;" id="player">
+							<audio hidden="true" autoplay=""autoplay"" type="audio/mp3" src="{SITE_THEME}images/RING_01.wav">
+							</audio>
+						</div>
+						<span><a target="_blank" class="g_button btn_white" href="/Rule/10016 ">彩种玩法</a></span><span><a class="g_button btn_white" href="javascript:setRing();">铃声设置</a></span> </div>
+					<div class="clear"> </div>
+				</div>
+				{/list}
+				<div class="g_clear"></div>
+			</div>
+			<div class="open_notic_tip g_hide" style="display: none;"> <span class="msg">注意：北京PK拾 第<em>000000</em>期 未开奖，您可以手动刷新或等待自动刷新！</span> <a target="_self" class="g_button btn_rosy" href="/Lottery/10016 ">手动刷新</a> </div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<div class="g_w1000  ">
+	<div class="sub_r_bot">
+		<div class="sub_bot_one"> <span class="sub_bot_bt"><strong>北京PK拾：</strong> 冷热分析 </span> <span class="r">开奖日期:&nbsp;&nbsp;
+			<input type="text" value="2016-03-16" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'1990'}); " name="OpenYear" id="yeartxt" class="sub_rili Wdate txt ">
+			<a onclick="sumti()" target="_self" class="g_button btn_orange rili_submit" href="javascript:void(0);">查询更多</a> </span> </div>
+	</div>
+</div>
+<div class="g_w1000 ">
+	<div style="margin-top: 0px;" class="content">
+		<div class="cont_box ">
+			<div class="tips" id="times-show" style="float: left; padding-left: 20px; /**/">
+				<input type="checkbox" onclick="checkhot()" style="padding-right: 10px; cursor: pointer;" id="showhot">
+				<label onclick="checkhot()" style="padding-right: 10px; cursor: pointer;" for="showhot">显示热号码出现次数</label>
+				&nbsp;&nbsp; <span>|</span>&nbsp;&nbsp;
+				近20期内 热码：出现频繁、活跃的号码；冷码：出现频率低甚至没有出现的号码；温码：介于冷热之间的号码。 </div>
+			<table class="lot-table sub_table">
+				<thead>
+					<tr style="height: 40px; background-color: #ECECEC;" class="thead">
+						<td width="160" style="line-height: 37px;">名次 </td>
+						<td style="line-height: 37px;">热 </td>
+						<td style="line-height: 37px;">温 </td>
+						<td style="line-height: 37px;">冷</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="line-height: 37px;">冠军</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks05 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span><span style="position: relative;" class="ball_pks_  ball_pks06 ball_lenght10  "><i style="display: none;" class="cx">⑤</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">亚军</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks02 ball_lenght10  "><i style="display: none;" class="cx">④</i></span><span style="position: relative;" class="ball_pks_  ball_pks03 ball_lenght10  "><i style="display: none;" class="cx">⑤</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第三球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks01 ball_lenght10  "><i style="display: none;" class="cx">⑤</i></span><span style="position: relative;" class="ball_pks_  ball_pks02 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第四球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks07 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第五球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks04 ball_lenght10  "><i style="display: none;" class="cx">⑦</i></span><span style="position: relative;" class="ball_pks_  ball_pks08 ball_lenght10  "><i style="display: none;" class="cx">④</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第六球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks10 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第七球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第八球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第九球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks01 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span><span style="position: relative;" class="ball_pks_  ball_pks08 ball_lenght10  "><i style="display: none;" class="cx">④</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks06 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks09 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span></td>
+					</tr>
+					<tr>
+						<td style="line-height: 37px;">第十球</td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span style="position: relative;" class="ball_pks_  ball_pks06 ball_lenght10  "><i style="display: none;" class="cx">④</i></span><span style="position: relative;" class="ball_pks_  ball_pks09 ball_lenght10  "><i style="display: none;" class="cx">⑥</i></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks02 ball_lenght10  "></span><span class="ball_pks_  ball_pks03 ball_lenght10  "></span><span class="ball_pks_  ball_pks04 ball_lenght10  "></span></td>
+						<td style="text-align: left; padding-left: 10px; line-height: 37px;"><span class="ball_pks_  ball_pks01 ball_lenght10  "></span><span class="ball_pks_  ball_pks05 ball_lenght10  "></span><span class="ball_pks_  ball_pks07 ball_lenght10  "></span><span class="ball_pks_  ball_pks08 ball_lenght10  "></span><span class="ball_pks_  ball_pks10 ball_lenght10  "></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{template footer}

@@ -1,0 +1,1136 @@
+{template header}
+<div class="g_w1000min open_form">
+    <div class="g_w1000 open_form">
+        <div class="sub_right right">
+            {template cqssc_com_nav}
+            <div class="sub_r_open_form sub_r_open_form_10011">
+    <div class="sub_mid_l">
+        <h1>重庆时时彩 </h1>
+        <h2>本期第<em style="color: #ff0000" id="cterm">000000</em>期</h2>
+    <h3><em id="fre_info">00</em>一期,全天<em id="fre_total">00</em>期</h3>
+            <h3>当前<em id="c_now">00</em>期,剩<em id="c_less">00</em>期</h3>
+        <div class="shuang_anniu">
+<span><a href="/Lottery/OpenTV/10011 " class="g_button btn_orange"  target="_blank">开奖视频</a></span>                    </div>
+
+    </div>
+    <div class="sub_mid_c">
+        <h2>本期开奖结果：<em style="color: #ff0000" id="msgInfo">...数据加载中,如不正常请手动刷新...</em></h2>
+        <div class="result">
+            <ul id="term_ball">
+            </ul>
+        </div>
+    </div>
+    <div class="sub_mid_r">
+
+        <h2>下期【第<em style="color: #ff0000" id="nterm">000000</em>期】</h2>
+        <h3><em style="color: #fff" id="ndate">00月00日21时30分</em></h3>
+        <div class="btn_bar">
+            <div style="display: none;" id="player"></div>
+            <span><a href="/Rule/10011 " class="g_button btn_white"  target="_blank">彩种玩法</a></span><span><a class="g_button btn_white" href="javascript:setRing();">铃声设置</a></span>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="g_clear"></div>
+</div>
+
+            <div class="open_notic_tip g_hide">
+                <span class="msg">注意：重庆时时彩 第<em>000000</em>期 未开奖，您可以手动刷新或等待自动刷新！</span>
+                <a href="/Lottery/10011 " class="g_button btn_rosy"  target="_self">手动刷新</a>
+            </div> 
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+<div class="g_w1000 sub_r_bot">
+    <div class="sub_bot_one">
+        <span class="sub_bot_bt"><strong>重庆时时彩：</strong> 路珠分析 </span>
+        <span class="showtype" style="margin-left: 20px;">切换模式：<em class="on">综合模式</em><em>单选模式</em><em>两面模式</em></span>
+        <span class="r">开奖日期:&nbsp;&nbsp;
+                        <input class="sub_rili Wdate txt " id="yeartxt" name="OpenYear" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'1990'}); " value="2016-03-25" />
+            <a href="javascript:void(0);" class="g_button btn_orange rili_submit" target="_self" onclick="sumti()">查询更多</a>
+        </span>
+    </div>
+</div>
+
+<div class="g_w1000 cont_box" id="chdball">
+    <div class="hisloading g_hide">
+        <img src="{SITE_THEME}images/loading_flash.gif" />
+    </div>
+    <div class="clear">
+    </div>
+    <table>
+        <tr>
+            <td class="show_hm">筛选球号：
+                <input id="ball1" type="checkbox" name="checkbox" checked="checked" onclick="selectball(this, 'ball_1');">第一球
+                <input id="ball2" type="checkbox" name="checkbox" checked="checked" onclick="selectball(this, 'ball_2');">第二球
+                <input id="ball3" type="checkbox" name="checkbox" checked="checked" onclick="selectball(this, 'ball_3');">第三球
+                <input id="ball4" type="checkbox" name="checkbox" checked="checked" onclick="selectball(this, 'ball_4');">第四球
+                <input id="ball5" type="checkbox" name="checkbox" checked="checked" onclick="selectball(this, 'ball_5');">第五球  
+                <input id="zh" type="checkbox" checked="checked" name="checkbox" onclick="selectball(this, 'zh');">总和                  
+                <span style="margin-left: 20px;">
+                    <a href="javascript:void(0);" style="color: red" onclick="selectAll(true, this)">全选</a>
+                    <a href="javascript:void(0);" onclick="selectAll(false, this)">清空</a>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td class="show_tp">筛选路珠：
+                <input id="chds" type="checkbox" checked="checked" onclick="selectball(this, 'dsLZ');">单双路珠
+                <input id="chdx" type="checkbox" checked="checked" onclick="selectball(this, 'dxLZ');">大小路珠
+            </td>
+        </tr>
+    </table>
+    <div class="g_clear"></div>
+</div>
+
+<div class="lz_content  g_w1000">
+    <div class="ZhongHeMol">
+        <div class="sub_form_lz">
+                <div class="item item_1  ball_1">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,1)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第1名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_6  ball_1">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,6)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第1名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_2  ball_2">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,2)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第2名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_7  ball_2">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,7)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第2名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_3  ball_3">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,3)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第3名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_8  ball_3">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,8)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第3名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_4  ball_4">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,4)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第4名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_9  ball_4">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,9)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第4名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_5  ball_5">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,5)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第5名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_10  ball_5">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                        <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,10)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                    </td>
+                                    <td style="color: #e84147; width: 200px; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第5名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class='lz_table_con fr'>
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="item item_12 zh ">
+                <div class="dsLZ">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,12)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">总和单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="item item_13 zh ">
+                <div class="dxLZ">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;ZhongHeMol&#39;,13)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">总和大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="lz_content  g_w1000 g_hide">
+    <div class="xuanhoaMol">
+        <table class="sub_table_lz_head" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tbody>
+                <tr>
+                    <th class="on" style="width: 200px;">第一球</th>
+                    <th class="" style="width: 200px;">第二球</th>
+                    <th class="" style="width: 200px;">第三球</th>
+                    <th class="" style="width: 200px;">第四球</th>
+                    <th class="" style="width: 200px;">第五球</th>
+                </tr>
+            </tbody>
+        </table>
+            <div class="sub_form_lz " >
+                <div class="item item_1 ">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="单">单</option>
+                                             <option value="双">双</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,1)" value="确定">出现的次数为:  <span class="sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：双(<span class="count left_count" data="双">0</span>)&nbsp;&nbsp;单(<span class="count right_count" data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 1 名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_6 ">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="大">大</option>
+                                             <option value="小">小</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,6)" value="确定">出现的次数为:  <span class="  sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：大(<span class="count left_count" data="大">0</span>)&nbsp;&nbsp;小(<span class="count right_count" data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 1 名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_form_lz g_hide" >
+                <div class="item item_2 ">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="单">单</option>
+                                             <option value="双">双</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,2)" value="确定">出现的次数为:  <span class="sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：双(<span class="count left_count" data="双">0</span>)&nbsp;&nbsp;单(<span class="count right_count" data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 2 名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_7 ">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="大">大</option>
+                                             <option value="小">小</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,7)" value="确定">出现的次数为:  <span class="  sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：大(<span class="count left_count" data="大">0</span>)&nbsp;&nbsp;小(<span class="count right_count" data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 2 名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_form_lz g_hide" >
+                <div class="item item_3 ">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="单">单</option>
+                                             <option value="双">双</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,3)" value="确定">出现的次数为:  <span class="sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：双(<span class="count left_count" data="双">0</span>)&nbsp;&nbsp;单(<span class="count right_count" data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 3 名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_8 ">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="大">大</option>
+                                             <option value="小">小</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,8)" value="确定">出现的次数为:  <span class="  sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：大(<span class="count left_count" data="大">0</span>)&nbsp;&nbsp;小(<span class="count right_count" data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 3 名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_form_lz g_hide" >
+                <div class="item item_4 ">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="单">单</option>
+                                             <option value="双">双</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,4)" value="确定">出现的次数为:  <span class="sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：双(<span class="count left_count" data="双">0</span>)&nbsp;&nbsp;单(<span class="count right_count" data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 4 名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_9 ">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="大">大</option>
+                                             <option value="小">小</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,9)" value="确定">出现的次数为:  <span class="  sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：大(<span class="count left_count" data="大">0</span>)&nbsp;&nbsp;小(<span class="count right_count" data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 4 名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_form_lz g_hide" >
+                <div class="item item_5 ">
+                    <div class="dsLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="单">单</option>
+                                             <option value="双">双</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,5)" value="确定">出现的次数为:  <span class="sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：双(<span class="count left_count" data="双">0</span>)&nbsp;&nbsp;单(<span class="count right_count" data="单">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 5 名单双路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item_10 ">
+                    <div class="dxLZ">
+                        <table class="lz_table_head">
+                            <tbody>
+                                <tr>
+                                    <td>搜：连续出现<input class="txtNum" type="text">次
+                                         <select class="secType">
+                                             <option value="">选择类型……</option>
+                                             <option value="大">大</option>
+                                             <option value="小">小</option>
+                                         </select>
+                                        <input type="button" class="btnCheck" onclick="doCheck(&#39;xuanhoaMol&#39;,10)" value="确定">出现的次数为:  <span class="  sec_count">0</span>
+                                    </td>
+
+                                    <td style="color: #e84147; text-align: right;">今日累计：大(<span class="count left_count" data="大">0</span>)&nbsp;&nbsp;小(<span class="count right_count" data="小">0</span>)
+                                    </td>
+                                    <td style="text-align: right; width: 100px;">第 5 名大小路珠 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="item_con" dir="rtl">
+                            <table class="lz_table_con fr">
+                                <tbody>
+                                    <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="lz_content  g_w1000 g_hide">
+    <div class="defaultMol">
+        <table class="sub_table_lz_head" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <tbody>
+                <tr>
+                    <th class="on" style="width: 200px;">单双路珠</th>
+                    <th class="" style="width: 200px;">大小路珠</th>
+                    <th class="" style="width: 200px;">龙虎路珠</th>
+                    <th class="" style="width: 200px;">总和单双路珠</th>
+                    <th class="">总和大小路珠</th>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 单双路珠 -->
+        <div class="sub_form_lz" id="dslz">
+                <div class="item item_1  ball_1">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,1)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第1名单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_2  ball_2">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,2)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第2名单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_3  ball_3">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,3)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第3名单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_4  ball_4">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,4)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第4名单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_5  ball_5">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,5)"  value='确定'>出现的次数为:  <span class='sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第5名单双路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <!-- 大小路珠 -->
+        <div class="sub_form_lz g_hide" id="dxlz">
+                <div class="item item_6  ball_1">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,6)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第1名大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_7  ball_2">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,7)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第2名大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_8  ball_3">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,8)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第3名大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_9  ball_4">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,9)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第4名大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item item_10  ball_5">
+                    <table class="lz_table_head">
+                        <tbody>
+                            <tr>
+                                <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                    <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,10)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                                </td>
+
+                                <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                                </td>
+                                <td style="text-align: right; width: 100px;">第5名大小路珠 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="item_con" dir="rtl">
+                        <table class='lz_table_con fr'>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        <!-- 龙虎路珠 -->
+        <div class="sub_form_lz g_hide" id="lhlz">
+            <div class="item item_11">
+                <table class="lz_table_head">
+                    <tbody>
+                        <tr>
+
+                            <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='龙'>龙</option>
+                                             <option value='虎'>虎</option>
+                                             <option value='和'>和</option>
+                                         </select>
+                                <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,11)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                            </td>
+
+                            <td style="color: #e84147; text-align: right;">今日累计：龙(<span class='count left_count' data="龙">0</span>)&nbsp;&nbsp;虎(<span class='count right_count' data="虎">0</span>)&nbsp;&nbsp;和(<span class='count right_count' data="和">0</span>)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item_con" dir="rtl">
+                    <table class='lz_table_con fr'>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 冠亚单双路珠 -->
+        <div class="sub_form_lz g_hide" id="zhdslz">
+            <div class="item item_12">
+                <table class="lz_table_head">
+                    <tbody>
+                        <tr>
+
+                            <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='单'>单</option>
+                                             <option value='双'>双</option>
+                                         </select>
+                                <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,12)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                            </td>
+
+                            <td style="color: #e84147; text-align: right;">今日累计：双(<span class='count left_count' data="双">0</span>)&nbsp;&nbsp;单(<span class='count right_count' data="单">0</span>)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item_con" dir="rtl">
+                    <table class='lz_table_con fr'>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 冠亚大小路珠 -->
+        <div class="sub_form_lz g_hide" id="zhdxlz">
+            <div class="item item_13">
+                <table class="lz_table_head">
+                    <tbody>
+                        <tr>
+                            <td>搜：连续出现<input class='txtNum' type='text'>次
+                                         <select class='secType'>
+                                             <option value=''>选择类型……</option>
+                                             <option value='大'>大</option>
+                                             <option value='小'>小</option>
+                                         </select>
+                                <input type='button' class='btnCheck'  onclick="doCheck(&#39;defaultMol&#39;,13)"  value='确定'>出现的次数为:  <span class='  sec_count'>0</span>
+                            </td>
+
+                            <td style="color: #e84147; text-align: right;">今日累计：大(<span class='count left_count' data="大">0</span>)&nbsp;&nbsp;小(<span class='count right_count' data="小">0</span>)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item_con" dir="rtl">
+                    <table class='lz_table_con fr'>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{template footer}
+
+<script src="http://www.168kai.cc/Scripts/luzhu/PartLZForm.js?sb=10241" ></script>
+    <script src="http://www.168kai.cc/Scripts/luzhu/getLZResults2.js?sb=10241" ></script>

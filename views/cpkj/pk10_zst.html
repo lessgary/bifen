@@ -1,0 +1,81 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 ">
+		<div class="sub_right  ">
+			{template pk10_com_nav}
+		</div>
+		<div class="clear">
+		</div>
+		<div class="sub_r_bot history">
+			<div class="sub_bot_one"><span class="sub_bot_bt">北京PK拾 冠亚季走势图</span></div>
+		</div>
+		
+		
+		<div class="cont_box">
+			
+<div id="d_qishu" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=30 more=1 order=id_DESC}{if $i>1},{/if}{$t['expect']}{php $i++;}{/list}</div>
+<div id="d_hao1" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=30 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[1]}{php $i++;}{/list}</div>
+<div id="d_hao2" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=30 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[2]}{php $i++;}{/list}</div>
+<div id="d_hao3" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=30 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[3]}{php $i++;}{/list}</div>
+
+<script src="{SITE_THEME}images/echarts.min.js"></script>
+<div id="mainchart" class="pk10_chart_pp2"></div>
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart'));
+var sz_qishu = $("#d_qishu").text().split(",").reverse();
+var sz_hao1 = $("#d_hao1").text().split(",").reverse();
+var sz_hao2 = $("#d_hao2").text().split(",").reverse();
+var sz_hao3 = $("#d_hao3").text().split(",").reverse();
+option = {
+    title: {
+        text: '',
+        subtext: ''
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['冠军','亚军','季军']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            magicType: {show: true, type: ['stack', 'tiled']},
+            saveAsImage: {show: true}
+        }
+    },
+    xAxis: {
+        type: 'value',
+		splitNumber:10
+    },
+    yAxis: {
+		name:'期数',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu
+    },
+    series: [{
+        name: '冠军',
+        type: 'line',
+		symbolSize:'15',
+        data: sz_hao1
+    },
+    {
+        name: '亚军',
+        type: 'line',
+		symbolSize:'10',
+        data: sz_hao2
+    },
+    {
+        name: '季军',
+        type: 'line',
+        data: sz_hao3
+    }]
+};
+myChart.setOption(option);
+</script>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+{template footer}

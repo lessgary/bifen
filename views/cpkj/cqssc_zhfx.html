@@ -1,0 +1,1314 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000  "> {template cqssc_com_nav}
+		<div class="hisloading" style="display: none;"><img src="{SITE_THEME}images/loading_flash.gif"></div>
+		<div class="clear"> </div>
+	</div>
+	<div class="g_w1000  ">
+		<div class="sub_r_bot">
+			<div class="sub_bot_one"> <span class="sub_bot_bt"><strong>重庆时时彩：</strong> 综合页 </span> <span style="margin: 25px 0 0 20px; display: block; float: left; cursor: pointer; color: #A85E09; height: 20px; line-height: 16px; font-size: 14px;">
+				<input type="checkbox" id="tj1" onclick="showorhide(this, 'sm');" name="checkbox">
+				<label for="tj1">今日双面\号码统计</label>
+				<input type="checkbox" id="tx1" onclick="showorhide(this, 'cllkts');" name="checkbox">
+				<label for="tx1">长龙提醒</label>
+				<input type="checkbox" id="hmfb1" onclick="showorhide(this, 'chdball');" name="checkbox">
+				<label for="hmfb1">查看号码分布</label>
+				</span> <span class="r">开奖日期:&nbsp;&nbsp;
+				<input type="text" value="2016-03-18" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'1990'}); " name="OpenYear" id="yeartxt" class="sub_rili Wdate txt ">
+				<a onclick="sumti()" target="_self" class="g_button btn_orange rili_submit" href="javascript:void(0);">查询更多</a> </span> </div>
+		</div>
+	</div>
+	<div class="g_w1000 ">
+		<div style="margin-top: 0px;" class="content">
+			<div class="cont_box open_form">
+				<style>
+    .dx_shadow { width: 1000px; }
+
+    .top_right { border-bottom: 1px solid #e3e3e3; font-size: 12px; height: 25px; line-height: 25px; }
+    .top_right_red { border-bottom: 1px solid #e3e3e3; color: red; font-size: 12px; height: 25px; line-height: 25px; }
+    .chuxian { height: 25px; line-height: 25px; }
+</style>
+				<div class="sm g_hide">
+					<table style="width: 100%;" id="haomaTJ" class="sub_table">
+						<thead>
+							<tr>
+								<th style="text-align: left;" colspan="41">今日号码统计</th>
+							</tr>
+							<tr>
+								<th>0</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								<th>4</th>
+								<th>5</th>
+								<th>6</th>
+								<th>7</th>
+								<th>8</th>
+								<th>9</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="ssc_hm_Result">
+								<td>31</td>
+								<td>28</td>
+								<td>35</td>
+								<td>22</td>
+								<td>19</td>
+								<td>23</td>
+								<td>27</td>
+								<td>19</td>
+								<td>21</td>
+								<td>25</td>
+							</tr>
+						</tbody>
+					</table>
+					<table style="width: 100%; margin-top: 5px;" id="smTJ" class="sub_table">
+						<thead>
+							<tr>
+								<th style="text-align: left;" colspan="25">今日双面统计</th>
+							</tr>
+							<tr>
+								<th colspan="5">总和</th>
+								<th colspan="4">第一球</th>
+								<th colspan="4">第二球</th>
+								<th colspan="4">第三球</th>
+								<th colspan="4">第四球</th>
+								<th colspan="4">第五球</th>
+							</tr>
+							<tr>
+								<th></th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+								<th>单</th>
+								<th>双</th>
+								<th>大</th>
+								<th>小</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="ssc_dsdx_Result">
+								<td><div class="top_right">期数差</div>
+									<div class="chuxian">出现次数</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">19</div></td>
+								<td><div class="top_right_red">12</div>
+									<div class="chuxian">31</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">20</div></td>
+								<td><div class="top_right_red">10</div>
+									<div class="chuxian">30</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">22</div></td>
+								<td><div class="top_right_red">6</div>
+									<div class="chuxian">28</div></td>
+								<td><div class="top_right_red">2</div>
+									<div class="chuxian">26</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">24</div></td>
+								<td><div class="top_right_red">2</div>
+									<div class="chuxian">26</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">24</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">22</div></td>
+								<td><div class="top_right_red">6</div>
+									<div class="chuxian">28</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">24</div></td>
+								<td><div class="top_right_red">2</div>
+									<div class="chuxian">26</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">22</div></td>
+								<td><div class="top_right_red">6</div>
+									<div class="chuxian">28</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">19</div></td>
+								<td><div class="top_right_red">12</div>
+									<div class="chuxian">31</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">22</div></td>
+								<td><div class="top_right_red">6</div>
+									<div class="chuxian">28</div></td>
+								<td><div class="top_right_red">2</div>
+									<div class="chuxian">26</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">24</div></td>
+								<td><div class="top_right">0</div>
+									<div class="chuxian">23</div></td>
+								<td><div class="top_right_red">4</div>
+									<div class="chuxian">27</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<table style="width: 100%; margin-top: 5px; margin-bottom: 5px;" id="cltx" class="sub_table g_hide cllkts">
+					<thead>
+						<tr>
+							<th style="text-align: left;" colspan="6">长龙连开提醒
+								<label style="margin-left: 30px;font-size:12px;font-weight:normal;">设置当前连开
+									<select onchange="changetxnum();" id="sltAll">
+										<option selected="selected" value="2">2</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+									</select>
+									期提醒</label></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>第五球：双 5 期</td>
+							<td>第五球：小 5 期</td>
+							<td>第四球：大 4 期</td>
+							<td>第二球：双 3 期</td>
+							<td>总和：小 3 期</td>
+							<td>第一球：单 2 期</td>
+						</tr>
+						<tr>
+							<td>第三球：单 2 期</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="" class="sub_table g_w1000 chdball g_hide">
+					<tbody>
+						<tr class="show_hm">
+							<td><strong>查看车号分布：</strong></td>
+							<td style="text-align: left;"><input type="checkbox" data_val="1" name="checkbox" id="ball1">
+								<label for="ball1">号码1</label>
+								<input type="checkbox" data_val="2" name="checkbox" id="ball2">
+								<label for="ball2">号码2</label>
+								<input type="checkbox" data_val="3" name="checkbox" id="ball3">
+								<label for="ball3">号码3</label>
+								<input type="checkbox" data_val="4" name="checkbox" id="ball4">
+								<label for="ball4">号码4</label>
+								<input type="checkbox" data_val="5" name="checkbox" id="ball5">
+								<label for="ball5">号码5</label>
+								<input type="checkbox" data_val="6" name="checkbox" id="ball6">
+								<label for="ball6">号码6</label>
+								<input type="checkbox" data_val="7" name="checkbox" id="ball7">
+								<label for="ball7">号码7</label>
+								<input type="checkbox" data_val="8" name="checkbox" id="ball8">
+								<label for="ball8">号码8</label>
+								<input type="checkbox" data_val="9" name="checkbox" id="ball9">
+								<label for="ball9">号码9</label>
+								<input type="checkbox" data_val="0" name="checkbox" id="ball0">
+								<label for="ball0">号码0</label>
+								<span style="margin-left: 20px;"> <a onclick="clearShade(this, false)" style="color: red" href="javascript:void(0);">还原</a> </span></td>
+						</tr>
+						<tr class="show_tp">
+							<td><strong>大小单双分布：</strong></td>
+							<td style="text-align: left;"><input type="checkbox" id="d" date_oe="o" name="o">
+								<label for="d">单</label>
+								<input type="checkbox" id="s" date_oe="e" name="e">
+								<label for="s">双</label>
+								<span>|</span>
+								<input type="checkbox" id="da" date_bs="b" name="b">
+								<label for="da">大</label>
+								<input type="checkbox" id="xiao" date_bs="s" name="s">
+								<label for="xiao">小</label>
+								<span style="margin-left: 20px;"> <a onclick="clearShade(this, false)" style="color: red" href="javascript:void(0);">还原</a> </span></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="hisloading g_hide"> <img src="{SITE_THEME}images/loading_flash.gif"> </div>
+				<table style="margin: 0; width: 1000px;" id="nav" class="lot-table">
+					<thead>
+						<tr style="height: 40px; background-color: #ECECEC;" class="thead">
+							<td class="termwidth">期数</td>
+							<td class="openwidth">开奖号码</td>
+							<td colspan="3" class="zhonghewidth">总和</td>
+							<td class="longhuwidth g_r_line">龙虎</td>
+							<td colspan="5" class="dxwidth g_r_line">1-5球大小</td>
+							<td colspan="5" class="dswidth g_r_line">1-5球单双</td>
+							<td class="zswidth">前三</td>
+							<td class="hswidth">中三</td>
+							<td class="hswidth">后三</td>
+						</tr>
+					</thead>
+					<tbody id="reslist">
+						<tr>
+							<td class="termwidth">20160318049</td>
+							<td class="openwidth"><span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">21</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318048</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318047</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318046</td>
+							<td class="openwidth"><span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">24</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318045</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318044</td>
+							<td class="openwidth"><span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">26</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318043</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span></td>
+							<td style="width: 30px;">16</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318042</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">38</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318041</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">13</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">顺子</td>
+							<td class="hswidth">顺子</td>
+							<td>顺子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318040</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">20</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318039</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">19</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318038</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span></td>
+							<td style="width: 30px;">14</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318037</td>
+							<td class="openwidth"><span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">25</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318036</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">18</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318035</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">6</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">顺子</td>
+							<td class="hswidth">顺子</td>
+							<td>顺子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318034</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">36</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318033</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">25</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318032</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">12</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318031</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">14</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318030</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">15</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318029</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">37</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318028</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">24</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318027</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">14</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318026</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span></td>
+							<td style="width: 30px;">25</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318025</td>
+							<td class="openwidth"><span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span></td>
+							<td style="width: 30px;">27</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318024</td>
+							<td class="openwidth"><span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">23</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318023</td>
+							<td class="openwidth"><span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">15</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318022</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">28</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318021</td>
+							<td class="openwidth"><span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span></td>
+							<td style="width: 30px;">28</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318020</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span></td>
+							<td style="width: 30px;">26</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318019</td>
+							<td class="openwidth"><span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">18</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">顺子</td>
+							<td class="hswidth">顺子</td>
+							<td>顺子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318018</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span></td>
+							<td style="width: 30px;">24</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318017</td>
+							<td class="openwidth"><span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span></td>
+							<td style="width: 30px;">31</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318016</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">24</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318015</td>
+							<td class="openwidth"><span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span></td>
+							<td style="width: 30px;">13</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318014</td>
+							<td class="openwidth"><span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">24</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318013</td>
+							<td class="openwidth"><span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span></td>
+							<td style="width: 30px;">18</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318012</td>
+							<td class="openwidth"><span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">豹子</td>
+							<td class="hswidth">豹子</td>
+							<td>豹子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318011</td>
+							<td class="openwidth"><span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">15</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318010</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">5</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318009</td>
+							<td class="openwidth"><span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="green  g_r_line longhuwidth">和</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318008</td>
+							<td class="openwidth"><span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span></td>
+							<td style="width: 30px;">15</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318007</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span></td>
+							<td style="width: 30px;">22</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318006</td>
+							<td class="openwidth"><span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="2" class="ball_s_ ball_s_blue ball_lenght5  ">2</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">8</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">杂六</td>
+							<td class="hswidth">杂六</td>
+							<td>杂六</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318005</td>
+							<td class="openwidth"><span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span></td>
+							<td style="width: 30px;">19</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">对子</td>
+							<td class="hswidth">对子</td>
+							<td>对子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318004</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">20</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318003</td>
+							<td class="openwidth"><span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="4" class="ball_s_ ball_s_blue ball_lenght5  ">4</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span></td>
+							<td style="width: 30px;">20</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line" style="width: 30px;">双</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318002</td>
+							<td class="openwidth"><span title="7" class="ball_s_ ball_s_blue ball_lenght5  ">7</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span></td>
+							<td style="width: 30px;">27</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line longhuwidth">虎</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray g_r_line" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">顺子</td>
+							<td class="hswidth">顺子</td>
+							<td>顺子</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160318001</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="9" class="ball_s_ ball_s_blue ball_lenght5  ">9</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="6" class="ball_s_ ball_s_blue ball_lenght5  ">6</span> <span title="3" class="ball_s_ ball_s_blue ball_lenght5  ">3</span></td>
+							<td style="width: 30px;">26</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+						<tr>
+							<td class="termwidth">20160317120</td>
+							<td class="openwidth"><span title="8" class="ball_s_ ball_s_blue ball_lenght5  ">8</span> <span title="0" class="ball_s_ ball_s_blue ball_lenght5  ">0</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span> <span title="5" class="ball_s_ ball_s_blue ball_lenght5  ">5</span> <span title="1" class="ball_s_ ball_s_blue ball_lenght5  ">1</span></td>
+							<td style="width: 30px;">15</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="gray g_r_line longhuwidth">龙</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="blue" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">大</td>
+							<td class="blue g_r_line" style="width: 30px;">小</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="gray" style="width: 30px;">双</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue" style="width: 30px;">单</td>
+							<td class="blue g_r_line" style="width: 30px;">单</td>
+							<td class="zswidth">半顺</td>
+							<td class="hswidth">半顺</td>
+							<td>半顺</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+{template footer}

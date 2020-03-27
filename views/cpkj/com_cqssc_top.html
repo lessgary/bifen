@@ -1,0 +1,49 @@
+<div class="sub_trend_menu">
+				<div class="links_form">
+<a href="./index.php?c=content&a=list&catid=3">即时开奖</a> 
+{php $i=1;}
+{loop $cats $t}
+{if $t['parentid']==3}
+{if $i<9}
+<span>|</span><a href="{$t['url']}">{$t['catname']}</a>
+{/if}
+{php $i++;}
+{/if}
+{/loop}
+					<div class="g_clear"></div>
+				</div>
+				<div class="g_clear"></div>
+			</div>
+			<div class="sub_r_open_form sub_r_open_form_10011">
+				{list catid=$catid num=1 order=id more=1}
+				{php $a = explode(',',$t['opencode']);}
+				<div class="sub_mid_l">
+					<h1>重庆时时彩 </h1>
+					<h2>本期第<em id="cterm" style="color: #ff0000">{$t['expect']}</em>期</h2>
+					<h3><em id="fre_info">每5/10分钟</em>一期,全天<em id="fre_total">120</em>期</h3>
+					<h3>当前<em id="c_now">45</em>期,剩<em id="c_less">75</em>期</h3>
+					<div class="shuang_anniu"> <span><a target="_blank" class="g_button btn_orange" href="/Lottery/OpenTV/10011 ">开奖视频</a></span> </div>
+				</div>
+				<div class="sub_mid_c">
+					<h2>本期开奖结果：<em id="msgInfo" style="color: rgb(255, 0, 0); display: none;">...数据加载中,如不正常请手动刷新...</em></h2>
+					<div class="result">
+						<ul id="term_ball">
+							<span title="7" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[1]}</span><span title="9" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[1]}</span><span title="2" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[2]}</span><span title="2" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[3]}</span><span title="2" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[4]}</span>
+						</ul>
+					</div>
+				</div>
+				<div class="sub_mid_r">
+					<h2>下期【第<em id="nterm" style="color: #ff0000">{$t['expect']+1}</em>期】</h2>
+					<h3><em id="ndate" style="color: #fff">
+						<p>08:45</p>
+						</em></h3>
+					<div class="btn_bar">
+						<div id="player" style="display: none;"></div>
+						<span><a target="_blank" class="g_button btn_white" href="/Rule/10011 ">彩种玩法</a></span><span><a href="javascript:setRing();" class="g_button btn_white">铃声设置</a></span> </div>
+					<div class="clear"> </div>
+				</div>
+				{/list}
+				<div class="g_clear"></div>
+			</div>
+			<div class="open_notic_tip g_hide" style="display: none;"> <span class="msg">注意：重庆时时彩 第<em>000000</em>期 未开奖，您可以手动刷新或等待自动刷新！</span> <a target="_self" class="g_button btn_rosy" href="/Lottery/10011 ">手动刷新</a> </div>
+			

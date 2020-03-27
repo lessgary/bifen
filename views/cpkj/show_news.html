@@ -1,0 +1,37 @@
+﻿{template header}
+<div class="height10"></div>
+<div class="pmain">
+	<div class="pmainz">
+		<div class="pmainzd2">
+			<div class="pmainzd2t">您当前位置：<a  href="{SITE_PATH}">首页</a> >> {catpos($catid, ' &gt;&gt;&nbsp;&nbsp;')}</div>
+			<div class="pmainzd2c">
+				<div class="pmainzd2ct">
+					<h1>{$title}</h1>
+				</div>
+				<div class="pmainzd2cc">
+					{$content}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pmainy">
+		<div class="pmainyd">
+			<div class="pmainzdt"><span>彩种玩法</span></div>
+			<div class="pmainydc">
+				{list catid=52 num=1 order=updatetime}
+                <li><a href="{$t['url']}">{$t['title']}</a></li>
+                {/list}
+			</div>
+		</div>
+		
+		<div class="pmainyd">
+			<div class="pmainzdt"><span>热门帖子</span></div>
+			<div class="pmainydc">
+				{list catid=$catid num=10 order=updatetime}
+              
+                {/list}
+			</div>
+		</div>
+	</div>
+</div>
+{template footer}

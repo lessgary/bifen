@@ -1,0 +1,76 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000  ">
+		{template cqssc_com_nav}
+		<div class="sub_r_bot history">
+			<div class="sub_bot_one"> <span class="sub_bot_bt">重庆时时彩 开奖记录</span> <span class="r">开奖日期:&nbsp;&nbsp;
+				<input class="sub_rili Wdate  date" type="text" id="datetimepicker" value="">
+				<a href="javascript:void(0); " class="g_button btn_orange rili_submit">查询更多</a></span>
+			</div>
+		</div>
+		
+		
+		<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/jquery.datetimepicker.css" />
+		<script type="text/javascript" src="{SITE_THEME}images/jquery.datetimepicker.js"></script> 
+		<script>
+		$('#datetimepicker').datetimepicker({
+			yearOffset:0,
+			lang:'ch',
+			timepicker:false,
+			format:'Y-m-d',
+			formatDate:'Y-m-d'
+		});
+		</script>
+
+		<table class="lot-table" id="nav" style="margin: 0; width: 1000px;">
+                <thead>
+                    <tr class="thead" style="height: 40px; background-color: #ECECEC;">
+                        <td class="termwidth">期数</td>
+                        <td class="openwidth">开奖号码</td>
+                        <td class="zhonghewidth" colspan="3">总和</td>
+                        <td class="longhuwidth g_r_line">龙虎</td>
+                        <td class="dxwidth g_r_line" colspan="5">1-5球大小</td>
+                        <td class="dswidth g_r_line" colspan="5">1-5球单双</td>
+                    </tr>
+
+                </thead>
+                <tbody id="reslist">
+			{php
+				$day = isset($_GET['day']) ? $_GET['day']:date('Y-m-d',time());
+			}
+			{list catid=$parentid LIKEopentime=%$day% pagesize=500 more=1 order=id}
+					{php $a = explode(',',$t['opencode']);}
+	<tr>
+        <td class="termwidth">{$t['expect']}</td>
+        <td class="openwidth">
+                <span title="{$a[0]}" class="ball_s_ ball_s_blue ball_lenght5  ">{$a[0]}</span>
+                <span title="{$a[1]}" class="ball_s_ ball_s_blue ball_lenght5  ">{$a[1]}</span>
+                <span title="{$a[2]}" class="ball_s_ ball_s_blue ball_lenght5  ">{$a[2]}</span>
+                <span title="{$a[3]}" class="ball_s_ ball_s_blue ball_lenght5  ">{$a[3]}</span>
+                <span title="{$a[4]}" class="ball_s_ ball_s_blue ball_lenght5  ">{$a[4]}</span>
+        </td>
+        <td>{$a[0]+$a[1]+$a[2]+$a[3]+$a[4]}</td>
+
+        <td class="{if ($a[1]+$a[1]+$a[2]+$a[3]+$a[4])>=23}blue{else}gray{/if}">{if ($a[0]+$a[1]+$a[2]+$a[3]+$a[4])>=23}大{else}小{/if}</td>
+
+        <td class="{if ($a[1]+$a[1]+$a[2]+$a[3]+$a[4])%2==0}blue{else}gray{/if}">{if ($a[0]+$a[1]+$a[2]+$a[3]+$a[4])%2==0}双{else}单{/if}</td>
+		<td class="{if $a[0]>$a[4]}blue{else if $a[0]==$a[4]}green{else}gray{/if}  g_r_line longhuwidth">{if $a[0]>$a[4]}龙{else if $a[0]==$a[4]}和{else}虎{/if}</td>
+
+		<td class="{if $a[0]>4}blue{else}gray{/if}">{if $a[0]>4}大{else}小{/if}</td>
+		<td class="{if $a[1]>4}blue{else}gray{/if}">{if $a[1]>4}大{else}小{/if}</td>
+		<td class="{if $a[2]>4}blue{else}gray{/if}">{if $a[2]>4}大{else}小{/if}</td>
+		<td class="{if $a[3]>4}blue{else}gray{/if}">{if $a[3]>4}大{else}小{/if}</td>
+		<td class="{if $a[4]>4}blue{else}gray{/if} g_r_line">{if $a[4]>4}大{else}小{/if}</td>
+		<td class="{if $a[0]%2==0}blue{else}gray{/if}">{if $a[0]%2==0}双{else}单{/if}</td>
+		<td class="{if $a[1]%2==0}blue{else}gray{/if}">{if $a[1]%2==0}双{else}单{/if}</td>
+		<td class="{if $a[2]%2==0}blue{else}gray{/if}">{if $a[2]%2==0}双{else}单{/if}</td>
+		<td class="{if $a[3]%2==0}blue{else}gray{/if}">{if $a[3]%2==0}双{else}单{/if}</td>
+		<td class="{if $a[4]%2==0}blue{else}gray{/if} g_r_line">{if $a[4]%2==0}双{else}单{/if}</td>
+    </tr>
+	{/list}		
+                </tbody>
+            </table>
+
+	</div>
+</div>
+{template footer}

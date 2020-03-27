@@ -1,0 +1,36 @@
+{template header}
+<div class="height10"></div>
+<div class="pmain">
+	<div class="pmainz">
+		<div class="pmainzd">
+			<div class="pmainzdt"><span>{$catname}</span></div>
+			<div class="pmainzdc">
+				{list catid=$catid page=$page pagesize=20 order=updatetime}
+                <li><span>{date("Y-m-d", $t['updatetime'])}</span> <a href="{$t['url']}">{$t['title']}</a></li>
+                {/list}
+                
+			</div>
+			<div class="listpage">{$pagelist}</div>
+		</div>
+	</div>
+	<div class="pmainy">
+		<div class="pmainyd">
+			<div class="pmainzdt"><span>彩种玩法</span></div>
+			<div class="pmainydc">
+				{list catid=52 num=10 order=updatetime}
+                <li><a href="{$t['url']}">{$t['title']}</a></li>
+                {/list}
+			</div>
+		</div>
+		
+		<div class="pmainyd">
+			<div class="pmainzdt"><span>热门帖子</span></div>
+			<div class="pmainydc">
+				{list catid=$catid num=10 order=updatetime}
+                <li><a href="{$t['url']}">{$t['title']}</a></li>
+                {/list}
+			</div>
+		</div>
+	</div>
+</div>
+{template footer}

@@ -1,0 +1,448 @@
+﻿<?php include $this->_include('header'); ?>
+
+<div class="height10"></div>
+<div class="pmain3l open_items">
+	<div class="pmain3lz">
+		<div class="pmain3lzz">
+			<div class="pmain3lzzt">开奖直播</div>
+			<div class="pmain3lzzc">
+				<li><a href="./index.php?c=content&a=list&catid=48"><img src="<?php echo SITE_THEME; ?>images/v1.jpg" /></a></li>
+				<li><a href="http://33133.com/index.php?c=content&a=list&catid=53"><img src="<?php echo SITE_THEME; ?>images/v2.jpg" /></a></li>
+				<li><a href="./index.php?c=content&a=list&catid=57"><img src="<?php echo SITE_THEME; ?>images/v3.jpg" /></a></li>
+				<li><a href="./index.php?c=content&a=list&catid=55"><img src="<?php echo SITE_THEME; ?>images/v4.jpg" /></a></li>
+				<li><a href="./index.php?c=content&a=list&catid=59"><img src="<?php echo SITE_THEME; ?>images/v5.jpg" /></a></li>
+				<li><a href="./index.php?c=content&a=list&catid=58"><img src="<?php echo SITE_THEME; ?>images/v6.jpg" /></a></li>
+			</div>
+		</div>
+		<div class="pmain3lzy">
+			<div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<ul>
+					    <li><a href="./index.php?c=content&a=list&catid=48" target="_blank"><img src="<?php echo SITE_THEME; ?>images/f2.jpg" /></a></li>
+						<li><a href="./index.php?c=content&a=list&catid=54" target="_blank"><img src="<?php echo SITE_THEME; ?>images/f1.jpg" /></a></li>
+						<li><a href="./index.php?c=content&a=list&catid=55" target="_blank"><img src="<?php echo SITE_THEME; ?>images/f3.jpg" /></a></li>
+						<li><a href="./index.php?c=content&a=list&catid=59" target="_blank"><img src="<?php echo SITE_THEME; ?>images/f4.jpg" /></a></li>
+						<li><a href="./index.php?c=content&a=list&catid=55" target="_blank"><img src="<?php echo SITE_THEME; ?>images/f5.jpg" /></a></li>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+			$(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",interTime:4000});
+			</script>
+			<div class="height10"></div>
+		
+		</div>
+	</div>
+	<div class="pmain3ly">
+		<div class="pmain3lyt">会员登录</div>
+		<div class="pmain3lyc">
+			<div class="pmain3lycd">
+				<div class="pmain3lycdz"><img src="<?php echo SITE_THEME; ?>images/sflogo.png" width="66" /></div>
+				<div class="pmain3lycdy">
+					<li><a href="http://sf1177.com/reg.php?intr=33133kai" target="_blank">注册</a></li><li><a href="http://www.sf2255.com" target="_blank">登录</a></li>
+				</div>
+			</div>
+			<div class="pmain3lycd">
+				<img src="<?php echo SITE_THEME; ?>images/shouji.png" width="218" /></div>
+					<div class="pmain3lycd">
+				<img src="<?php echo SITE_THEME; ?>images/login.png" width="218" /></div>
+					
+				</div>
+			
+		
+		
+			
+		</div>
+	</div>
+</div>
+<div class="height10"></div>
+<div class="pmain open_items">
+	<div class="pmaind">
+		<div class="item items_2 info_4001">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=4"><img src="<?php echo SITE_THEME; ?>images/ina_04.png" /></a>
+				</div>
+				<div class="d">
+					<p>香港彩&nbsp;<span class="open_term" id="term4001">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=17">开奖历史</a></span></p>
+					<div class="info">
+						<span id="nterm4001">000</span>期开奖时间：<span id="ndate4001">00月00日00时00分</span>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="top">
+					<div class="ball">
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l1"></span> <br />
+							<font id="info_l1">--</font>
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l2"></span> <br />
+							<font id="info_l2">--</font>
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l3"></span> <br />
+							<font id="info_l3">--</font>
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l4"></span> <br />
+							<font id="info_l4">--</font>
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l5"></span> <br />
+							<font id="info_l5">--</font>
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l6"></span> <br />
+							<font id="info_l6">--</font>
+						</dl>
+						<dl>
+							+
+						</dl>
+						<dl>
+							<span class="ball_hk6_ ball_hk6_blue" id="ball_l7"></span> <br />
+							<font id="info_l7">--</font>
+						</dl>
+					</div>
+					<div class="ball-sum">
+						总分<br />
+						<span id="ball_sum4001">[00]</span>
+					</div>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="m" id="msgInfo4001">
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="pmain3lzy_zx">
+			<div class="pmain3lzy_zxt"><span>彩票资讯</span><em><a href="./index.php?c=content&a=list&catid=51"><img src="<?php echo SITE_THEME; ?>images/more.gif" /></a></em></div>
+			<div class="pmain3lzy_zxc">
+				<div class="pmain3lzy_zxc1">
+					<?php $return = $this->_listdata("modelid=1 catid=60 order=updatetime num=1 cache=0"); extract($return); $count=count($return); if (is_array($return)) { foreach ($return as $key=>$t) { ?>
+					<h3><a href="<?php echo $t['url']; ?>"><?php echo $t['title']; ?></a></h3>
+					<p><?php echo strcut($t['description'],130); ?></p>
+					<?php } } ?>
+				</div>
+				<div class="pmain3lzy_zxc2">
+					<?php $return = $this->_listdata("modelid=1 catid=60 order=updatetime num=1,8 cache=0"); extract($return); $count=count($return); if (is_array($return)) { foreach ($return as $key=>$t) { ?>
+					<li><a href="<?php echo $t['url']; ?>"><?php echo strcut($t['title'],26); ?></a></li>
+					<?php } } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item info_10016 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=2"><img src="<?php echo SITE_THEME; ?>images/logo10016.png" /></a>
+				</div>
+				<div class="d">
+					<p>北京PK拾&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=9">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='3'>冠亚</th>
+								<th colspan='5'>1-5球龙虎</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='3'>--</td>
+								<td colspan='5'>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item items_2 info_10011 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=3"><img src="<?php echo SITE_THEME; ?>images/logo10011.png" /></a>
+				</div>
+				<div class="d">
+					<p>重庆时时彩&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=26">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='3'>总和</th>
+								<th colspan='1'>龙虎</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='3'>--</td>
+								<td colspan='1'>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item items_2 info_1008 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=5"><img src="<?php echo SITE_THEME; ?>images/logo1008.png" /></a>
+				</div>
+				<div class="d">
+					<p>广东快乐十分&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=34">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='3'>总和</th>
+								<th>尾大小 </th>
+								<th colspan='4'>1-4龙虎</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='3'>--</td>
+								<td>--</td>
+								<td>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item info_1006 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=7"><img src="<?php echo SITE_THEME; ?>images/logo10028.png" /></a>
+				</div>
+				<div class="d">
+					<p>江苏快3&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=43">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='6'>总和</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='2'>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item info_10010 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=8"><img src="<?php echo SITE_THEME; ?>images/logo10010.png" /></a>
+				</div>
+				<div class="d">
+					<p>重庆幸运农场&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=44">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='3'>总和</th>
+								<th>尾大小 </th>
+								<th colspan='4'>1-4龙虎</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='3'>--</td>
+								<td>--</td>
+								<td>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+	<div class="pmaind">
+		<div class="item items_2 info_10014 ">
+			<div class="lo">
+				<div class="t">
+					<a href="./index.php?c=content&a=list&catid=6"><img src="<?php echo SITE_THEME; ?>images/logo10014.png" /></a>
+				</div>
+				<div class="d">
+					<p>北京快乐8&nbsp;<span class="open_term">000</span>期&nbsp;<span class="spaninri"><a href="./index.php?c=content&a=list&catid=38">开奖历史</a></span></p>
+					<div class="info">
+						<div class="ppt">
+							<div class="l">
+								<span class="next_term">000</span>期开奖时间：
+							</div>
+							<div class="next_date next_date2">
+								<span>00</span><em>:</em><span>01</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ball-gp">
+				<div class="t ">
+					<ul class="term_ball">
+					</ul>
+				</div>
+				<div class="d">
+					<table border="0" cellspacing="0" cellpadding="0" width="100%">
+						<tbody>
+							<tr class="th_header">
+								<th colspan='3'>总和</th>
+								<th>单双</th>
+								<th>前后</th>
+								<th>总和组合</th>
+								<th>五行</th>
+							</tr>
+							<tr class="td_body">
+								<td colspan='3'>--</td>
+								<td>--</td>
+								<td>--</td>
+								<td>--</td>
+								<td>--</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="g_clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="g_clear">
+			</div>
+		</div>
+	</div>
+</div>
+<?php include $this->_include('footer'); ?>

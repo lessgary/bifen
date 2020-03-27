@@ -1,0 +1,178 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 open_form">
+		<div class="sub_right right">
+			{template cqssc_com_nav}
+			<div class="sub_r_open_form sub_r_open_form_10011">
+				<div class="sub_mid_l">
+					<h1>重庆时时彩 </h1>
+					<h2>本期第<em style="color: #ff0000" id="cterm">000000</em>期</h2>
+					<h3><em id="fre_info">00</em>一期,全天<em id="fre_total">00</em>期</h3>
+					<h3>当前<em id="c_now">00</em>期,剩<em id="c_less">00</em>期</h3>
+					<div class="shuang_anniu">
+						<span><a href="/Lottery/OpenTV/10011 " class="g_button btn_orange"  target="_blank">开奖视频</a></span>
+					</div>
+				</div>
+				<div class="sub_mid_c">
+					<h2>本期开奖结果：<em style="color: #ff0000" id="msgInfo">...数据加载中,如不正常请手动刷新...</em></h2>
+					<div class="result">
+						<ul id="term_ball">
+						</ul>
+					</div>
+				</div>
+				<div class="sub_mid_r">
+					<h2>下期【第<em style="color: #ff0000" id="nterm">000000</em>期】</h2>
+					<h3><em style="color: #fff" id="ndate">00月00日21时30分</em></h3>
+					<div class="btn_bar">
+						<div style="display: none;" id="player">
+						</div>
+						<span><a href="/Rule/10011 " class="g_button btn_white"  target="_blank">彩种玩法</a></span><span><a class="g_button btn_white" href="javascript:setRing();">铃声设置</a></span>
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+				<div class="g_clear">
+				</div>
+			</div>
+			<div class="open_notic_tip g_hide">
+				<span class="msg">注意：重庆时时彩 第<em>000000</em>期 未开奖，您可以手动刷新或等待自动刷新！</span> <a href="/Lottery/10011 " class="g_button btn_rosy"  target="_self">手动刷新</a>
+			</div>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>
+<div class="g_w1000  ">
+	<div class="sub_r_bot">
+		<div class="sub_bot_one">
+			<span class="sub_bot_bt"><strong>重庆时时彩：</strong> 冷热分析 </span> <span class="r">开奖日期:&nbsp;&nbsp;
+			<input class="sub_rili Wdate txt " id="yeartxt" name="OpenYear" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'1990'}); " value="2016-03-25" />
+			<a href="javascript:void(0);" class="g_button btn_orange rili_submit" target="_self" onclick="sumti()">查询更多</a> </span>
+		</div>
+	</div>
+</div>
+<div class="g_w1000 ">
+	<div class="content" style="margin-top: 0px;">
+		<div class="cont_box ">
+			<div style="float: left; padding-left: 20px; /**/" id="times-show" class="tips">
+				<input type="checkbox" id="showhot" style="padding-right: 10px; cursor: pointer;" onclick="checkhot()" />
+				<label for="showhot" style="padding-right: 10px; cursor: pointer;" onclick="checkhot()">显示热号码出现次数</label>
+				&nbsp;&nbsp; <span>|</span>&nbsp;&nbsp;
+				近20期内 热码：出现频繁、活跃的号码；冷码：出现频率低甚至没有出现的号码；温码：介于冷热之间的号码。
+			</div>
+			<table class="lot-table">
+				<thead>
+					<tr class="thead" style="height: 40px; background-color: #ECECEC;">
+						<td width="160">名次 </td>
+						<td>热 </td>
+						<td>温 </td>
+						<td>冷</td>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<script src="http://www.168kai.cc/Scripts/luzhu/PartLZForm.js?sb=10241" ></script>
+    <script type="text/javascript">
+        var id = "10011";
+        function sumti() {
+            var year = $("#yeartxt").val();
+            window.location.href = "http://www.168kai.cc/SSC/LengReFX/?id=" + id + "&dateStr=" + year;
+        }
+        function checkhot() {
+            if ($("#showhot").prop("checked") == true) {
+                $(".lot-table tbody i").show();
+                $(".lot-table td").css("line-height", "55px");
+            }
+            else {
+                $(".lot-table tbody i").hide();
+                $(".lot-table td").css("line-height", "37px");
+            }
+        }
+        function iniDataList() {
+            var changedate = $("#yeartxt").val();
+            if (changedate == "" || changedate == null) { changedate = Date.now.toString("yyyy-MM-dd"); }
+            var qishu = $(".secType").val();
+            var post_path = "";
+            post_path = "http://www.168kai.cc/SSC/GetLengRe?id=" + id + "&dateStr=" + changedate + "&qishu=" + qishu + "&_=" + Math.random(6);
+            $.ajax({
+                url: post_path,
+                type: "GET",
+                dataType: 'json',
+                timeout: 20000,
+                beforeSend: function () { },
+                success: function (json) {
+                    if (json.statue == 0) {
+                        var row = "";
+                        for (var i = 0; i < 5; i++) {
+                            var ballnum = "";
+                            switch (i) {
+                                case 0: ballnum = "第一球"; break;
+                                case 1: ballnum = "第二球"; break;
+                                case 2: ballnum = "第三球"; break;
+                                case 3: ballnum = "第四球"; break;
+                                case 4: ballnum = "第五球"; break;
+                            }
+                            row += "<tr>";
+                            row += "<td>" + ballnum + "</td><td style='text-align:left;padding-left:10px;'>";
+                            for (var j = 0; j < json.re[i].length; j++) {
+                                row += "<span class='ball_s_ ball_s_blue ball_lenght5' style='position: relative;'>" + json.re[i][j] + "<i class='cx' style='display: none;'>" + fontStyle(json.cx[i][j]) + "</i></span>";//" + json.cx[i][j] + "
+                            }
+                            row += "</td><td style='text-align:left;padding-left:10px;'>";
+                            for (var j = 0; j < json.wen[i].length; j++) {
+                                row += "<span class='ball_s_ ball_s_blue ball_lenght5'>" + json.wen[i][j] + "</span>";
+                            }
+                            row += "</td><td style='text-align:left;padding-left:10px;'>";
+                            for (var j = 0; j < json.leng[i].length; j++) {
+                                row += "<span class='ball_s_ ball_s_blue ball_lenght5'>" + json.leng[i][j] + "</span>";
+                            }
+                            row += "</td></tr>";
+                        }
+                        $(".lot-table tbody").html(row);
+                        checkhot();
+                    } else {
+                        $(".lot-table tbody").html("没有数据！");
+                    }
+
+                },
+                complete: function (XMLHttpRequest, textStatus) { },
+                error: function (xhr) {
+                    //setTimeout(function () { load_new() }, 3000);
+                }
+            });
+        }
+
+        function fontStyle(info) {
+            var c_lass = "④";
+            switch (info) {
+                case 1: c_lass = "①"; break;
+                case 2: c_lass = "②"; break;
+                case 3: c_lass = "③"; break;
+                case 4: c_lass = "④"; break;
+                case 5: c_lass = "⑤"; break;
+                case 6: c_lass = "⑥"; break;
+                case 7: c_lass = "⑦"; break;
+                case 8: c_lass = "⑧"; break;
+                case 9: c_lass = "⑨"; break;
+                case 10: c_lass = "⑩"; break;
+                case 11: c_lass = "⑪"; break;
+                case 12: c_lass = "⑫"; break;
+                case 13: c_lass = "⑬"; break;
+                case 14: c_lass = "⑭"; break;
+                case 15: c_lass = "⑮"; break;
+                case 16: c_lass = "⑯"; break;
+                case 17: c_lass = "⑰"; break;
+                case 18: c_lass = "⑱"; break;
+                case 19: c_lass = "⑲"; break;
+                case 20: c_lass = "⑳"; break;
+            }
+            return c_lass;
+        }
+    </script>
+
+{template footer}

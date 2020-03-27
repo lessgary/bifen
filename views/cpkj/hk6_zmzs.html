@@ -1,0 +1,141 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 open_form">
+		<div class="sub_right right">
+			{template hk6_com_nav}
+			{template hk6_com_kj}
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>
+<div class="g_w1000">
+	<div class="content">
+		<div class="g_w1000  ">
+			<div class="sub_r_bot">
+				<div class="sub_bot_one">
+					<span class="sub_bot_bt"><strong>香港彩：</strong> 正码走势 </span> 
+				</div>
+			</div>
+		</div>
+		<div class="cont_box">
+			<table class="table_box sub_table" id="chartstable" cellspacing="1" cellpadding="0" width="100%" align="center" border="0">
+				<tbody>
+					<tr class="tabbg weight">
+						<td class="line_r" rowspan="2">期号</td>
+						<td class="line_r" colspan="36">号码</td>
+					</tr>
+					<tr class="tabbg weight">
+						<td colspan="6">正码一 </td>
+						<td class="line_r" colspan="6">正码二</td>
+						<td class="line_r" colspan="6">正码三</td>
+						<td class="line_r" colspan="6">正码四</td>
+						<td class="line_r" colspan="6">正码五</td>
+						<td class="line_r" colspan="6">正码六</td>
+					</tr>
+				{php
+				$year = isset($_GET['day']) ? $_GET['day']:date('Y',time());
+				}
+				{php $bose = array(1=>"red",2=>"red",7=>"red",8=>"red",12=>"red",13=>"red",18=>"red",19=>"red",23=>"red",24=>"red",29=>"red",30=>"red",34=>"red",35=>"red",40=>"red",45=>"red",46=>"red",3=>"blue", 4=>"blue", 9=>"blue", 10=>"blue", 14=>"blue", 15=>"blue", 20=>"blue", 25=>"blue", 26=>"blue", 31=>"blue", 36=>"blue", 37=>"blue", 41=>"blue", 42=>"blue", 47=>"blue", 48=>"blue", 5=>"green", 6=>"green", 11=>"green", 16=>"green", 17=>"green", 21=>"green", 22=>"green", 27=>"green", 28=>"green", 32=>"green", 33=>"green", 38=>"green", 39=>"green", 43=>"green", 44=>"green", 49=>"green");}
+				{php $bisezhongwen = array("red"=>"红","blue"=>"蓝","green"=>"绿");}
+				
+				{php $jiaqin = array ('牛','马','羊','鸡','狗','猪');}
+				{php $yeshou = array ('鼠','虎','兔','龙','蛇','猴');}
+				
+				{php $shengxiao = array ('鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪' );}
+				{php $dangqian_y = date('Y',time());}
+				{php $nian_cha = ($dangqian_y-2008)%12-1;}
+				
+				{list catid=$parentid LIKEopentime=%$year% page=$page num=500 order=id more=1}
+				{php $a = explode(',',$t['opencode']);}
+				<tr class="tr{if ($key+1)%2==0}2{else}1{/if}">
+					<td class="line_r" align="middle">{$t['expect']} </td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[0]]}" >{$a[0]}</span></td>
+					<td class="{if $a[0]>24}da{else}xiao{/if}">{if $a[0]>24}大{else}小{/if}</td>
+					<td class="{if ($a[0]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[0]%2)==0}双{else}单{/if}</span></td>
+					<?php
+						$b = array();
+						if((int)$a[0] < 10){
+							$b[1] = 0;
+							$b[2] = $a[0];
+						}else{
+							$b[1] = $a[0][0];
+							$b[2] = $a[0][1];
+						}
+						if((int)$a[1] < 10){
+							$b[3] = 0;
+							$b[4] = $a[1];
+						}else{
+							$b[3] = $a[1][0];
+							$b[4] = $a[1][1];
+						}
+						if((int)$a[2] < 10){
+							$b[5] = 0;
+							$b[6] = $a[2];
+						}else{
+							$b[5] = $a[2][0];
+							$b[6] = $a[2][1];
+						}
+						if((int)$a[3] < 10){
+							$b[7] = 0;
+							$b[8] = $a[3];
+						}else{
+							$b[7] = $a[3][0];
+							$b[8] = $a[3][1];
+						}
+						if((int)$a[4] < 10){
+							$b[9] = 0;
+							$b[10] = $a[4];
+						}else{
+							$b[9] = $a[4][0];
+							$b[10] = $a[4][1];
+						}
+						if((int)$a[5] < 10){
+							$b[11] = 0;
+							$b[12] = $a[5];
+						}else{
+							$b[11] = $a[5][0];
+							$b[12] = $a[5][1];
+						}
+					?>
+					<td class="{if ($b[1]+$b[2])>6}heda{else}hexiao{/if}">{if ($b[1]+$b[2])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[1]+$b[2])%2==0}heshuang{else}hedan{/if}">{if ($b[1]+$b[2])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[2]<5}weixiao{else}weida{/if} ">{if $b[2]<5}尾小{else}尾大{/if}</td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[1]]}" >{$a[1]}</span></td>
+					<td class="{if $a[1]>24}da{else}xiao{/if}">{if $a[1]>24}大{else}小{/if}</td>
+					<td class="{if ($a[1]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[1]%2)==0}双{else}单{/if}</span></td>
+					<td class="{if ($b[3]+$b[4])>6}heda{else}hexiao{/if}">{if ($b[3]+$b[4])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[3]+$b[4])%2==0}heshuang{else}hedan{/if}">{if ($b[3]+$b[4])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[4]<5}weixiao{else}weida{/if} ">{if $b[4]<5}尾小{else}尾大{/if}</td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[2]]}" >{$a[2]}</span></td>
+					<td class="{if $a[2]>24}da{else}xiao{/if}">{if $a[2]>24}大{else}小{/if}</td>
+					<td class="{if ($a[2]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[2]%2)==0}双{else}单{/if}</span></td>
+					<td class="{if ($b[5]+$b[6])>6}heda{else}hexiao{/if}">{if ($b[5]+$b[6])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[5]+$b[6])%2==0}heshuang{else}hedan{/if}">{if ($b[5]+$b[6])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[6]<5}weixiao{else}weida{/if} ">{if $b[6]<5}尾小{else}尾大{/if}</td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[3]]}" >{$a[3]}</span></td>
+					<td class="{if $a[3]>24}da{else}xiao{/if}">{if $a[3]>24}大{else}小{/if}</td>
+					<td class="{if ($a[3]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[3]%2)==0}双{else}单{/if}</span></td>
+					<td class="{if ($b[7]+$b[8])>6}heda{else}hexiao{/if}">{if ($b[7]+$b[8])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[7]+$b[8])%2==0}heshuang{else}hedan{/if}">{if ($b[7]+$b[8])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[8]<5}weixiao{else}weida{/if} ">{if $b[8]<5}尾小{else}尾大{/if}</td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[4]]}" >{$a[4]}</span></td>
+					<td class="{if $a[4]>24}da{else}xiao{/if}">{if $a[4]>24}大{else}小{/if}</td>
+					<td class="{if ($a[4]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[4]%2)==0}双{else}单{/if}</span></td>
+					<td class="{if ($b[9]+$b[10])>6}heda{else}hexiao{/if}">{if ($b[9]+$b[10])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[9]+$b[10])%2==0}heshuang{else}hedan{/if}">{if ($b[9]+$b[10])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[10]<5}weixiao{else}weida{/if} ">{if $b[10]<5}尾小{else}尾大{/if}</td>
+					<td><span class="ball_hk6_ ball_hk6_{$bose[(int)$a[5]]}" >{$a[5]}</span></td>
+					<td class="{if $a[5]>24}da{else}xiao{/if}">{if $a[5]>24}大{else}小{/if}</td>
+					<td class="{if ($a[5]%2)==0}shuang{else}dan{/if}"><span class="lds">{if ($a[5]%2)==0}双{else}单{/if}</span></td>
+					<td class="{if ($b[11]+$b[12])>6}heda{else}hexiao{/if}">{if ($b[11]+$b[12])>6}合大{else}合小{/if}</td>
+					<td class="{if ($b[11]+$b[12])%2==0}heshuang{else}hedan{/if}">{if ($b[11]+$b[12])%2==0}合双{else}合单{/if}</td>
+					<td class="{if $b[12]<5}weixiao{else}weida{/if} ">{if $b[12]<5}尾小{else}尾大{/if}</td>
+				</tr>
+				{/list}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{template footer}

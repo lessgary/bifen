@@ -1,0 +1,199 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 open_form">
+		<div class="sub_right right">
+			{template hk6_com_nav}
+			{template hk6_com_kj}
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+</div>
+<div class="g_w1000  ">
+	<div class="sub_r_bot">
+		<div class="sub_bot_one">
+			<span class="sub_bot_bt">综合自定义统计</span><small style="margin-left: 10px;">历史开奖结果，最简单、最实用、最准确的公式规律。</small> <span class="r"></span>
+		</div>
+	</div>
+</div>
+<div class="g_w1000 zhtj_main">
+	<ul>
+		<form action="/MarkSix/ZongHeTJ" method="post">
+			<li class="xianshi">
+				<label>显示类型：</label>
+				<input type="hidden" id="numIndex" name="numIndex" value="0" />
+				<label><a class="condition" href="/MarkSix/ZongHeTJ">显示全部</a></label>
+				<label><a href="?ball=0&OpenYear=2016">一码</a></label>
+				<label><a href="?ball=1&OpenYear=2016">二码</a></label>
+				<label><a href="?ball=2&OpenYear=2016">三码</a></label>
+				<label><a href="?ball=3&OpenYear=2016">四码</a></label>
+				<label><a href="?ball=4&OpenYear=2016">五码</a></label>
+				<label><a href="?ball=5&OpenYear=2016">六码</a></label>
+				<label><a href="?ball=6&OpenYear=2016">特码</a></label>
+			</li>
+			<li>
+				<label>选择年份：</label>
+				<input class="sub_rili Wdate txt " id="yeartxt" name="OpenYear" type="text" onfocus="WdatePicker({dateFmt:'yyyy年',minDate:'1990'});" value="2016" />
+				<input type="submit" style="background: url(/Styles/images/rili_submit.png) no-repeat; width: 96px; height: 29px; color: #fff; border: none; cursor: pointer; margin-right: 15px; margin-left: 10px;" value="查询">
+			</li>
+		</form>
+	</ul>
+	<ul>
+		<li class="max">
+			<label>选择属性：</label>
+			<select id="numShengXiaoCondition" name="numShengXiaoCondition">
+				<option value="">所有生肖</option>
+				<option value="鼠">鼠</option>
+				<option value="牛">牛</option>
+				<option value="虎">虎</option>
+				<option value="兔">兔</option>
+				<option value="龙">龙</option>
+				<option value="蛇">蛇</option>
+				<option value="马">马</option>
+				<option value="羊">羊</option>
+				<option value="猴">猴</option>
+				<option value="鸡">鸡</option>
+				<option value="狗">狗</option>
+				<option value="猪">猪</option>
+			</select>
+			<select id="danShuangCondition" name="danShuangCondition" class="">
+				<option value="">所有单双</option>
+				<option value="单">单</option>
+				<option value="双">双</option>
+			</select>
+			<select id="boSeCondition" name="boSeCondition" class="">
+				<option value="">所有波色</option>
+				<option value="红">红</option>
+				<option value="蓝">蓝</option>
+				<option value="绿">绿</option>
+			</select>
+			<select id="banbanboCondition" name="banbanboCondition" class="">
+				<option value="">所有半半波</option>
+				<option value="红大单">红大单</option>
+				<option value="红大双">红大双</option>
+				<option value="红小单">红小单</option>
+				<option value="红小双">红小双</option>
+				<option value="蓝大单">蓝大单</option>
+				<option value="蓝大双">蓝大双</option>
+				<option value="蓝小单">蓝小单</option>
+				<option value="蓝小双">蓝小双</option>
+				<option value="绿大单">绿大单</option>
+				<option value="绿大双">绿大双</option>
+				<option value="绿小单">绿小单</option>
+				<option value="绿小双">绿小双</option>
+			</select>
+			<select id="daXiaoCondition" name="daXiaoCondition" class="">
+				<option value="">所有大小</option>
+				<option value="大">大</option>
+				<option value="小">小</option>
+			</select>
+			<select id="touNumCondition" name="touNumCondition" class="">
+				<option value="">所有特头</option>
+				<option value="0头">0头</option>
+				<option value="1头">1头</option>
+				<option value="2头">2头</option>
+				<option value="3头">3头</option>
+				<option value="4头">4头</option>
+				
+                ﻿﻿﻿﻿﻿﻿﻿﻿
+            
+			</select>
+			<select id="weiNumCondition" name="weiNumCondition" class="">
+				<option value="">所有尾数</option>
+				<option value="0尾">0尾</option>
+				<option value="1尾">1尾</option>
+				<option value="2尾">2尾</option>
+				<option value="3尾">3尾</option>
+				<option value="4尾">4尾</option>
+				<option value="5尾">5尾</option>
+				<option value="6尾">6尾</option>
+				<option value="7尾">7尾</option>
+				<option value="8尾">8尾</option>
+				<option value="9尾">9尾</option>
+			</select>
+			<select id="jiaYeCondition" name="jiaYeCondition" class="">
+				<option value="">所有家野</option>
+				<option value="家禽">家禽</option>
+				<option value="野兽">野兽</option>
+			</select>
+			<br>
+		</li>
+		<li>
+			<label></label>
+			<input id="Search" type="button" style="background: url({SITE_THEME}images/rili_submit.png) no-repeat; width: 96px; height: 29px; color: #fff; border: none; cursor: pointer; margin-right: 15px; margin-left: 10px;" value="搜索" onclick="changeAttr()">
+			<input type="button" style="background: url({SITE_THEME}images/sub_giveup.png) no-repeat; width: 96px; height: 29px; border: none; cursor: pointer; margin-right: 15px; margin-left: 10px;" value="清除选择" onclick="javascript: resetInfos();">
+		</li>
+	</ul>
+</div>
+<div class="g_w1000 zhtj_content ">
+	<h2><span>搜索结果</span><span class="left">
+		<label>浏览方式：</label>
+		<input type="checkbox" name="haoMaOrShengXiao" checked="checked" onclick="javascript: showHaoMaAndShengXiao();">
+		<a href="javascript:void(0);" onclick="javascript:showHaoMaAndShengXiao();">完整版显示</a>
+		<input type="checkbox" name="haoMaOrShengXiao" onclick="    javascript: showShengXiao();">
+		<a href="javascript:void(0);" onclick="javascript:showShengXiao();">只显生肖</a>
+		<input type="checkbox" name="haoMaOrShengXiao" onclick="    javascript: showHaoMa();">
+		<a href="javascript:void(0);" onclick="javascript:showHaoMa();">只显号码</a>&nbsp; </span></h2>
+	<table class="sub_table">
+		<thead>
+			<tr>
+				<th style="width: 70px">开奖日期</th>
+				<th style="width: 55px">期数</th>
+				<th class=""></th>
+				<th class=" bg-high2 ">特码</th>
+				<th style="width: 40px">生肖</th>
+				<th style="width: 40px">单双</th>
+				<th style="width: 40px">波色</th>
+				<th style="width: 55px">半半波</th>
+				<th style="width: 40px">大小</th>
+				<th style="width: 40px">特头</th>
+				<th style="width: 40px">尾数</th>
+				<th style="width: 55px">合单双</th>
+				<th style="width: 40px">家野</th>
+				<th style="width: 65px">总和单双</th>
+			</tr>
+		</thead>
+		<tbody id="getResult">
+			{list catid=$parentid page=$page pagesize=100 order=id more=1}
+				{php $a = explode(',',$t['opencode']);}
+                <tr>
+                    <td>{$t['opentime']}</td>
+                    <td>{$t['expect']}</td>
+                    <td>
+                            <span class="hm  ball_hk6_  ball_hk6_green">{$a[1]}</span>
+                            <span class="sx">龙</span>
+                            <span class="hm  ball_hk6_  ball_hk6_red">{$a[1]}</span>
+                            <span class="sx">兔</span>
+                            <span class="hm  ball_hk6_  ball_hk6_green">{$a[2]}</span>
+                            <span class="sx">猴</span>
+                            <span class="hm  ball_hk6_  ball_hk6_red">{$a[3]}</span>
+                            <span class="sx">鸡</span>
+                            <span class="hm  ball_hk6_  ball_hk6_blue">{$a[4]}</span>
+                            <span class="sx">猪</span>
+                            <span class="hm  ball_hk6_  ball_hk6_green">{$a[5]}</span>
+                            <span class="sx">马</span>
+                            <span class="hm  ball_hk6_  ball_hk6_green">{$a[6]}</span>
+                            <span class="sx">马</span>
+                    </td>
+                        <td class=" bg-high2 ">
+                            <span class="hm  ball_hk6_ ball_hk6_green ">{$a[6]}</span>
+                        </td> 
+                        <td class=" sx_all">马</td>
+                        <td class="dan danshuang" style="width: 29px">单</td>
+                        <td class="green  sebo" style="width: 29px">绿</td>
+                        <td class="green  banbanbo" style="width: 29px">绿大单</td>
+                        <td class="da  dx" style="width: 29px">大</td>
+                        <td class="tou3 toushu" style="width: 29px">3头</td>
+                        <td class="wei9  weishu" style="width: 29px">9尾</td>
+                        <td class="heshuang heshu">12合<br />合双</td>
+                        <td class="jiaqin  jy"  style="width: 29px">家禽</td>                                      
+
+                    <td class="min shuang">(172)双</td>
+                </tr>
+				{/list}
+		</tbody>
+	</table>
+</div>
+{template footer}
+<script src="{SITE_THEME}images/history.js"></script>
+<script src="{SITE_THEME}images/WdatePicker.js"></script>

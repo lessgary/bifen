@@ -1,0 +1,322 @@
+{template header}
+
+<div class="g_w1000min open_form">
+	<div class="g_w1000 open_form">
+		<div class="sub_right right">
+			{template pk10_com_nav}
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<div class="g_w1000 ">
+	<div class="content">
+		<div class="g_w1000  ">
+			<div class="sub_r_bot">
+				<div class="sub_bot_one"> <span class="sub_bot_bt"><strong>北京PK10：</strong> 号码统计 </span> <span class="r">开奖日期:&nbsp;&nbsp;
+					<input type="text" value="2016-03-16" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'1990'}); " name="OpenYear" id="yeartxt" class="sub_rili Wdate txt ">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="sumti()" target="_self" class="g_button btn_orange rili_submit" href="javascript:void(0);">查询</a> </span> </div>
+			</div>
+		</div>
+		<div class="cont_box ">
+			<table style="margin: 0 0;" class="lot-table">
+				<thead>
+					<tr>
+						<td style="background-color: #fff0a5; font-size: 14px;" colspan="21"><div id="colorSet">
+								<div style="padding-bottom: 5px; text-align: left;" class="content"> <b>使用说明：</b>提供号码当日的开出次数及近期未开次数，使用参数设置可自定义关注遗漏范围，请根据个人需要手动设置，各参数的数值可设置范围是：2-100。
+									<p> <span class="param" id="sid1"><span class="sparam1">参数设置：当数值大于
+										<input type="text" maxlength="3" id="star1" value="15" style="width: 25px; margin: 0 5px 0 5px;">
+										<input type="button" value="确认" onclick="changecolor();" class="spanAdd" id="changedata">
+										时为</span><span class="sparam2">红色(100期以上无上限自动转为蓝色)</span>
+										<input type="button" style="display: none;" id="spDel">
+										</span> </p>
+								</div>
+							</div></td>
+					</tr>
+					<tr style="height: 37px; background-color: #ECECEC;">
+						<td style="background-color: #fff;"><strong>排  名
+							<label>▶</label>
+							</strong></td>
+						<td colspan="2"><strong>冠  军</strong></td>
+						<td style="background-color: #fff;" colspan="2"><strong>亚  军</strong></td>
+						<td colspan="2"><strong>第三名</strong></td>
+						<td style="background-color: #fff;" colspan="2"><strong>第四名</strong></td>
+						<td colspan="2"><strong>第五名</strong></td>
+						<td style="background-color: #fff;" colspan="2"><strong>第六名</strong></td>
+						<td colspan="2"><strong>第七名</strong></td>
+						<td style="background-color: #fff;" colspan="2"><strong>第八名</strong></td>
+						<td colspan="2"><strong>第九名</strong></td>
+						<td style="background-color: #fff;" colspan="2"><strong>第十名</strong></td>
+					</tr>
+					<tr style="font-weight: inherit;" class="">
+						<td style="background-color: #ECECEC; width: 42px;">车  号<br>
+							<label>▼</label></td>
+						<td style="background-color: #fff;">总开</td>
+						<td style="background-color: #fff;">当前<br>
+							遗漏</td>
+						<td style="height: 37px; background-color: #ECECEC;">总开</td>
+						<td style="height: 37px; background-color: #ECECEC;">当前<br>
+							遗漏</td>
+						<td style="background-color: #fff;">总开</td>
+						<td style="background-color: #fff;">当前<br>
+							遗漏</td>
+						<td style="height: 37px; background-color: #ECECEC;">总开</td>
+						<td style="height: 37px; background-color: #ECECEC;">当前<br>
+							遗漏</td>
+						<td style="background-color: #fff;">总开</td>
+						<td style="background-color: #fff;">当前<br>
+							遗漏</td>
+						<td style="height: 37px; background-color: #ECECEC;">总开</td>
+						<td style="height: 37px; background-color: #ECECEC;">当前<br>
+							遗漏</td>
+						<td style="background-color: #fff;">总开</td>
+						<td style="background-color: #fff;">当前<br>
+							遗漏</td>
+						<td style="height: 37px; background-color: #ECECEC;">总开</td>
+						<td style="height: 37px; background-color: #ECECEC;">当前<br>
+							遗漏</td>
+						<td style="background-color: #fff;">总开</td>
+						<td style="background-color: #fff;">当前<br>
+							遗漏</td>
+						<td style="height: 37px; background-color: #ECECEC;">总开</td>
+						<td style="height: 37px; background-color: #ECECEC;">当前<br>
+							遗漏</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks01 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">6</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">38</td>
+						<td style="background-color:#ECECEC;" class="zk">5</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">16</td>
+						<td style="background-color: #fff;" class="zk">11</td>
+						<td style="background-color: #fff;" class="wk">0</td>
+						<td style="background-color:#ECECEC;" class="zk">4</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">19</td>
+						<td style="background-color: #fff;" class="zk">8</td>
+						<td style="background-color: #fff;" class="wk">6</td>
+						<td style="background-color:#ECECEC;" class="zk">8</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">22</td>
+						<td style="background-color: #fff;" class="zk">13</td>
+						<td style="background-color: #fff;" class="wk">10</td>
+						<td style="background-color:#ECECEC;" class="zk">6</td>
+						<td style="background-color:#ECECEC;" class="wk">1</td>
+						<td style="background-color: #fff;" class="zk">13</td>
+						<td style="background-color: #fff;" class="wk">5</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">32</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks02 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: #fff;" class="wk">1</td>
+						<td style="background-color:#ECECEC;" class="zk">14</td>
+						<td style="background-color:#ECECEC;" class="wk">8</td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: #fff;" class="wk">2</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">22</td>
+						<td style="background-color: #fff;" class="zk">6</td>
+						<td style="background-color: #fff;" class="wk">9</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">11</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: #fff;" class="wk">0</td>
+						<td style="background-color:#ECECEC;" class="zk">8</td>
+						<td style="background-color:#ECECEC;" class="wk">3</td>
+						<td style="background-color: #fff;" class="zk">5</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">26</td>
+						<td style="background-color:#ECECEC;" class="zk">5</td>
+						<td style="background-color:#ECECEC;" class="wk">4</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks03 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">5</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">18</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color:#ECECEC;" class="wk">3</td>
+						<td style="background-color: #fff;" class="zk">12</td>
+						<td style="background-color: #fff;" class="wk">11</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">2</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">23</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color:#ECECEC;" class="wk">0</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: #fff;" class="wk">1</td>
+						<td style="background-color:#ECECEC;" class="zk">6</td>
+						<td style="background-color:#ECECEC;" class="wk">4</td>
+						<td style="background-color: #fff;" class="zk">3</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">41</td>
+						<td style="background-color:#ECECEC;" class="zk">9</td>
+						<td style="background-color:#ECECEC;" class="wk">5</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks04 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">24</td>
+						<td style="background-color:#ECECEC;" class="zk">14</td>
+						<td style="background-color:#ECECEC;" class="wk">0</td>
+						<td style="background-color: #fff;" class="zk">8</td>
+						<td style="background-color: #fff;" class="wk">12</td>
+						<td style="background-color:#ECECEC;" class="zk">6</td>
+						<td style="background-color:#ECECEC;" class="wk">9</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: #fff;" class="wk">1</td>
+						<td style="background-color:#ECECEC;" class="zk">2</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">52</td>
+						<td style="background-color: #fff;" class="zk">3</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">16</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color:#ECECEC;" class="wk">6</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">17</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">3</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks05 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">12</td>
+						<td style="background-color: #fff;" class="wk">3</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">7</td>
+						<td style="background-color: #fff;" class="zk">4</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">26</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">18</td>
+						<td style="background-color: #fff;" class="zk">8</td>
+						<td style="background-color: #fff;" class="wk">0</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">1</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: #fff;" class="wk">2</td>
+						<td style="background-color:#ECECEC;" class="zk">12</td>
+						<td style="background-color:#ECECEC;" class="wk">8</td>
+						<td style="background-color: #fff;" class="zk">5</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">16</td>
+						<td style="background-color:#ECECEC;" class="zk">9</td>
+						<td style="background-color:#ECECEC;" class="wk">9</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks06 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">11</td>
+						<td style="background-color: #fff;" class="wk">2</td>
+						<td style="background-color:#ECECEC;" class="zk">9</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">21</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">22</td>
+						<td style="background-color:#ECECEC;" class="zk">5</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">16</td>
+						<td style="background-color: #fff;" class="zk">6</td>
+						<td style="background-color: #fff;" class="wk">3</td>
+						<td style="background-color:#ECECEC;" class="zk">9</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">15</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: #fff;" class="wk">5</td>
+						<td style="background-color:#ECECEC;" class="zk">10</td>
+						<td style="background-color:#ECECEC;" class="wk">0</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: #fff;" class="wk">4</td>
+						<td style="background-color:#ECECEC;" class="zk">10</td>
+						<td style="background-color:#ECECEC;" class="wk">1</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks07 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">17</td>
+						<td style="background-color:#ECECEC;" class="zk">4</td>
+						<td style="background-color:#ECECEC;" class="wk">4</td>
+						<td style="background-color: #fff;" class="zk">6</td>
+						<td style="background-color: #fff;" class="wk">5</td>
+						<td style="background-color:#ECECEC;" class="zk">18</td>
+						<td style="background-color:#ECECEC;" class="wk">1</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: #fff;" class="wk">8</td>
+						<td style="background-color:#ECECEC;" class="zk">6</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">16</td>
+						<td style="background-color: #fff;" class="zk">7</td>
+						<td style="background-color: #fff;" class="wk">3</td>
+						<td style="background-color:#ECECEC;" class="zk">4</td>
+						<td style="background-color:#ECECEC;" class="wk">9</td>
+						<td style="background-color: #fff;" class="zk">13</td>
+						<td style="background-color: #fff;" class="wk">2</td>
+						<td style="background-color:#ECECEC;" class="zk">4</td>
+						<td style="background-color:#ECECEC;" class="wk">0</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks08 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">11</td>
+						<td style="background-color: #fff;" class="wk">0</td>
+						<td style="background-color:#ECECEC;" class="zk">3</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">37</td>
+						<td style="background-color: #fff;" class="zk">3</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">23</td>
+						<td style="background-color:#ECECEC;" class="zk">8</td>
+						<td style="background-color:#ECECEC;" class="wk">3</td>
+						<td style="background-color: #fff;" class="zk">11</td>
+						<td style="background-color: #fff;" class="wk">12</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">2</td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: #fff;" class="wk">11</td>
+						<td style="background-color:#ECECEC;" class="zk">10</td>
+						<td style="background-color:#ECECEC;" class="wk">7</td>
+						<td style="background-color: #fff;" class="zk">8</td>
+						<td style="background-color: #fff;" class="wk">1</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">28</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks09 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">5</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">42</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">24</td>
+						<td style="background-color: #fff;" class="zk">11</td>
+						<td style="background-color: #fff;" class="wk">1</td>
+						<td style="background-color:#ECECEC;" class="zk">8</td>
+						<td style="background-color:#ECECEC;" class="wk">10</td>
+						<td style="background-color: #fff;" class="zk">5</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">16</td>
+						<td style="background-color:#ECECEC;" class="zk">11</td>
+						<td style="background-color:#ECECEC;" class="wk">3</td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: #fff;" class="wk">4</td>
+						<td style="background-color:#ECECEC;" class="zk">8</td>
+						<td style="background-color:#ECECEC;" class="wk">5</td>
+						<td style="background-color: #fff;" class="zk">8</td>
+						<td style="background-color: #fff;" class="wk">0</td>
+						<td style="background-color:#ECECEC;" class="zk">9</td>
+						<td style="background-color:#ECECEC;" class="wk">2</td>
+					</tr>
+					<tr>
+						<td><span style="margin-right: 0px;" class="ball_pks_ ball_pks10 ball_lenght10"></span></td>
+						<td style="background-color: #fff;" class="zk">3</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">15</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">1</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: #fff;" class="wk">10</td>
+						<td style="background-color:#ECECEC;" class="zk">7</td>
+						<td style="background-color:#ECECEC;" class="wk">0</td>
+						<td style="background-color: #fff;" class="zk">10</td>
+						<td style="background-color: rgb(255, 255, 255); color: red;" class="wk">27</td>
+						<td style="background-color:#ECECEC;" class="zk">13</td>
+						<td style="background-color:#ECECEC;" class="wk">5</td>
+						<td style="background-color: #fff;" class="zk">6</td>
+						<td style="background-color: #fff;" class="wk">14</td>
+						<td style="background-color:#ECECEC;" class="zk">6</td>
+						<td style="background-color: rgb(236, 236, 236); color: red;" class="wk">17</td>
+						<td style="background-color: #fff;" class="zk">9</td>
+						<td style="background-color: #fff;" class="wk">3</td>
+						<td style="background-color:#ECECEC;" class="zk">10</td>
+						<td style="background-color:#ECECEC;" class="wk">11</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{template footer}

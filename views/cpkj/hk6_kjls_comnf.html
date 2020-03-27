@@ -1,0 +1,13 @@
+		<div class="hklistnfen">
+		<li><a href="./index.php?c=content&a=list&catid=17">2016</a></li>
+		{loop $cats $c}
+		{if $c['parentid']==17}
+		<li><a href="{$c['url']}">{$c['catname']}</a></li>
+		{/if}
+		{/loop}
+		</div>
+		<script>
+		$("#hk6kjlsmore").click(function(){
+			$(".hklistnfen").toggle();
+		});
+		</script>

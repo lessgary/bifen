@@ -1,0 +1,78 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 ">
+		<div class="sub_right"> {template jsk3_com_nav} </div>
+		
+		<div class="sub_r_bot history">
+			<div class="sub_bot_one"> <span class="sub_bot_bt">江苏快3 开奖记录</span> <span class="r">开奖日期:&nbsp;&nbsp;
+				<input class="sub_rili Wdate  date" type="text" id="datetimepicker" value="">
+				<a class="g_button btn_orange rili_submit" href="javascript:void(0); ">查询更多</a></span>
+			</div>
+		</div>
+		<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/jquery.datetimepicker.css" />
+		<script type="text/javascript" src="{SITE_THEME}images/jquery.datetimepicker.js"></script> 
+		<script>
+		$('#datetimepicker').datetimepicker({
+			yearOffset:0,
+			lang:'ch',
+			timepicker:false,
+			format:'Y-m-d',
+			formatDate:'Y-m-d'
+		});
+		</script>
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" class="sub_table">
+		<thead>
+			<tr id="th_header">
+				<th width="163" class="">时间 </th>
+				<th width="103" class="">期数 </th>
+				<th width="380" class="">开奖号码 </th>
+				<th class="" colspan="3">总和</th>
+				<th colspan="3">鱼虾蟹</th>
+			</tr>
+		</thead>
+		<tbody linnos="0,1,2,5" id="reslist">
+			{php
+				$day = isset($_GET['day']) ? $_GET['day']:date('Y-m-d',time());
+			}
+			{php
+
+			$con = mysqli_connect("localhost","root","new-password","kjwang23dmei");
+			$sql = "select * from fn_content_1_jsk3 where opentime like '%$year%'  ORDER BY `id` DESC";
+			$res = mysqli_query($con,$sql);
+			$list = array();
+			while($row=mysqli_fetch_assoc($res))
+			$list[] = $row;
+
+			foreach($list as $res) {
+			$a = explode(',',$res['opencode']);
+
+			}
+			<tr {if ($key+1)%2==0}class="line_row"{/if}>
+				<td>{$res['opentime']}</td>
+				<td> {$res['expect']} </td>
+				<td>{php $a = explode(',',$res['opencode']);}<ul>
+						<span class="  ball_sz_ ball_sz{$a[0]} ball_lenght3  ">&nbsp;</span><span class="  ball_sz_ ball_sz{$a[1]} ball_lenght3  ">&nbsp;</span><span class="  ball_sz_ ball_sz{$a[2]} ball_lenght3  ">&nbsp;</span>
+					</ul></td>
+				<td class="count">{$a[0]+$a[1]+$a[2]}</td>
+				<td class="{if ($a[0]+$a[1]+$a[2])%2==0}gray{else}blue{/if}">{if ($a[0]+$a[1]+$a[2])%2==0}双{else}单{/if}</td>
+				<td class="{if ($a[0]+$a[1]+$a[2])>10}gray{else}blue{/if}">{if ($a[0]+$a[1]+$a[2])>10}大{else}小{/if}</td>
+				{php $ppx = array("1"=>"鱼","2"=>"虾","3"=>"葫芦","4"=>"金钱","5"=>"蟹","6"=>"鸡");}
+				<td class="gray ">{$ppx[$a[0]]}</td>
+				<td class="gray  max">{$ppx[$a[1]]}</td>
+				<td class="gray ">{$ppx[$a[2]]}</td>
+			</tr>
+			{php } }
+		</tbody>
+	</table>
+	<div class="clear"> </div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".rili_submit").click(function(event) {
+            var url = "index.php?c=content&a=list&catid="+{$param['catid']}+"&day="+$(".sub_rili").val();
+            window.location.href=url;
+        });
+    });
+</script> 
+{template footer} 

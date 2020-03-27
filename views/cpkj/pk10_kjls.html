@@ -1,0 +1,95 @@
+{template header}
+<div class="g_w1000min open_form">
+    <div class="g_w1000 ">
+        <div class="sub_right  ">
+            {template pk10_com_nav}
+        </div>
+        <div class="clear"> </div>
+		<div class="sub_r_bot history">
+            <div class="sub_bot_one">
+                <span class="sub_bot_bt">北京PK拾 开奖记录</span>
+                <span class="r">开奖日期:&nbsp;&nbsp;
+ <input type="text" id="datetimepicker" value="" class="sub_rili Wdate  date"><a class="g_button btn_orange rili_submit" href="javascript:void(0); ">查询更多</a></span>
+            </div>
+        </div>
+		<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/jquery.datetimepicker.css" />
+		<script type="text/javascript" src="{SITE_THEME}images/jquery.datetimepicker.js"></script>
+		<script>
+		$('#datetimepicker').datetimepicker({
+			yearOffset:0,
+			lang:'ch',
+			timepicker:false,
+			format:'Y-m-d',
+			formatDate:'Y-m-d'
+		});
+		</script>
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" class="sub_table">
+	<thead>
+		<tr id="th_header">
+			<th width="163" class="">时间 </th>
+			<th width="103" class="">期数 </th>
+			<th width="380" class="">开奖号码 </th>
+			<th class="g_r_line" colspan="3">冠亚</th>
+			<th colspan="5">1-5球龙虎</th>
+		</tr>
+	</thead>
+	<tbody linnos="0,1,2,5" id="reslist">
+		{php
+            $day = isset($_GET['day']) ? $_GET['day']:date('Y-m-d',time());
+        }
+		{php
+
+		$con = mysqli_connect("localhost","root","new-password","kjwang23dmei");
+		$sql = "select * from fn_content_1_bjpk10 where opentime like '%$year%'  ORDER BY `id` DESC";
+		$res = mysqli_query($con,$sql);
+		$list = array();
+		while($row=mysqli_fetch_assoc($res))
+		$list[] = $row;
+
+		foreach($list as $res) {
+		$a = explode(',',$res['opencode']);
+
+		}
+		<tr {if ($key+1)%2==0}class="line_row"{/if}>
+			<td>{$res['opentime']}</td>
+			<td> {$res['expect']} </td>
+			<td>{php $a = explode(',',$res['opencode']);}
+				<ul>
+					<span title="{$a[0]}" class="ball_pks_  ball_pks{$a[0]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[1]}" class="ball_pks_  ball_pks{$a[1]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[2]}" class="ball_pks_  ball_pks{$a[2]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[3]}" class="ball_pks_  ball_pks{$a[3]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[4]}" class="ball_pks_  ball_pks{$a[4]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[5]}" class="ball_pks_  ball_pks{$a[5]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[6]}" class="ball_pks_  ball_pks{$a[6]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[7]}" class="ball_pks_  ball_pks{$a[7]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[8]}" class="ball_pks_  ball_pks{$a[8]} ball_lenght10  ">&nbsp;</span>
+					<span title="{$a[9]}" class="ball_pks_  ball_pks{$a[9]} ball_lenght10  ">&nbsp;</span>
+				</ul>
+			</td>
+			<td class="count">{$a[0]+$a[1]}</td>
+			<td class="{if ($a[0]+$a[1])>11}gray{else}blue{/if}">{if ($a[0]+$a[1])>11}大{else}小{/if}</td>
+			<td class="{if ($a[0]+$a[1])%2==0}gray{else}blue{/if} g_r_line g_td_p_right">{if ($a[0]+$a[1])%2==0}双{else}单{/if}</td>
+			<td class="{if $a[1]>$a[9]}gray{else}blue{/if} g_td_p_left">{if $a[0]>$a[9]}龙{else}虎{/if}</td>
+			<td class="{if $a[1]>$a[8]}gray{else}blue{/if}">{if $a[1]>$a[8]}龙{else}虎{/if}</td>
+			<td class="{if $a[2]>$a[7]}gray{else}blue{/if}">{if $a[2]>$a[7]}龙{else}虎{/if}</td>
+			<td class="{if $a[3]>$a[6]}gray{else}blue{/if}">{if $a[3]>$a[6]}龙{else}虎{/if}</td>
+			<td class="{if $a[4]>$a[5]}gray{else}blue{/if}">{if $a[4]>$a[5]}龙{else}虎{/if}</td>
+		</tr>
+		{php } }
+	</tbody>
+</table>
+	<div class="hisloading" style="display: none;"><img src="{SITE_THEME}images/loading_flash.gif"></div>
+	<div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".rili_submit").click(function(event) {
+            var url = "index.php?c=content&a=list&catid="+{$param['catid']}+"&day="+$(".sub_rili").val();
+            window.location.href=url;
+        });
+    });
+</script>
+{template footer}

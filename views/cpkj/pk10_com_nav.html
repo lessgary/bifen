@@ -1,0 +1,17 @@
+﻿<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/hkbase.css?v=<?=rand()?>" />
+<div class="sub_trend_menu">
+	<div class="links_form"> 
+<a href="./index.php?c=content&a=list&catid=2">即时开奖</a> 
+{php $i=1;}
+{loop $cats $t}
+{if $t['parentid']==2}
+{if $i<9}
+<span>|</span><a href="{$t['url']}" {if $catid==$t['catid']}class="a"{/if}>{$t['catname']}</a>
+{/if}
+{php $i++;}
+{/if}
+{/loop}
+		<div class="g_clear"></div>
+	</div>
+	<div class="g_clear"></div>
+</div>

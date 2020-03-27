@@ -1,0 +1,231 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000  "> {template cqssc_com_nav}
+		<div class="clear"> </div>
+	</div>
+
+	<div class="g_w1000 ">
+	<div class="sub_r_bot history">
+			<div class="sub_bot_one"><span class="sub_bot_bt">重庆时时彩 基本走势</span></div>
+		</div>
+<div class="cont_box">
+			
+<div id="d_qishu" class="none">{php $i=40;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{if $i>0},{/if}{$i}{php $i--;}{/list}</div>
+<div id="d_qishu2" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{if $i>1},{/if}{php $i++;}{/list}</div>
+<div id="d_hao1" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[0]}{php $i++;}{/list}</div>
+<div id="d_hao2" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[1]}{php $i++;}{/list}</div>
+<div id="d_hao3" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[2]}{php $i++;}{/list}</div>
+<div id="d_hao4" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[3]}{php $i++;}{/list}</div>
+<div id="d_hao5" class="none">{php $i=1;}{list catid=$parentid LIKEopentime=%$day% num=40 more=1 order=id_DESC}{php $a = explode(',',$t['opencode']);}{if $i>1},{/if}{$a[4]}{php $i++;}{/list}</div>
+
+<script src="{SITE_THEME}images/echarts.min.js"></script>
+<div class="cqssc_chart_pp1"><div id="mainchart1" class="cqssc_chart_pp1c"></div></div>
+<div class="cqssc_chart_pp2"><div id="mainchart2" class="cqssc_chart_pp2c"></div></div>
+<div class="cqssc_chart_pp2"><div id="mainchart3" class="cqssc_chart_pp2c"></div></div>
+<div class="cqssc_chart_pp2"><div id="mainchart4" class="cqssc_chart_pp2c"></div></div>
+<div class="cqssc_chart_pp2"><div id="mainchart5" class="cqssc_chart_pp2c"></div></div>
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart1'));
+var sz_qishu = $("#d_qishu").text().split(",").reverse();
+var sz_hao1 = $("#d_hao1").text().split(",").reverse();
+option = {
+    title: {
+        text: '万位',
+		left: 'center'
+    },
+    xAxis: {
+		name:'',
+        type: 'value',
+		max:9,//X轴最大值
+		splitNumber:10//分成几段
+    },
+    yAxis: {
+		name:'   最新40期',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu
+    },
+    series: [{
+        name: '球1',
+		symbol:'circle',
+		symbolSize:'17',
+		label: {
+			normal: {
+				show: true,
+				position: 'insideBottom'
+			}
+		},
+        type: 'line',
+        data: sz_hao1
+    }],
+	color:['#ff0000']
+};
+myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart2'));
+var sz_qishu2 = $("#d_qishu2").text().split(",").reverse();
+var sz_hao2 = $("#d_hao2").text().split(",").reverse();
+option = {
+    title: {
+        text: '千位',
+		left: 'center'
+    },
+    xAxis: {
+		name:'',
+        type: 'value',
+		max:9,//X轴最大值
+		splitNumber:10//分成几段
+    },
+    yAxis: {
+		name:' ',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu2
+    },
+    series: [{
+        name: '球2',
+		symbol:'circle',
+		symbolSize:'17',
+		label: {
+			normal: {
+				show: true,
+				position: 'insideBottom'
+			}
+		},
+        type: 'line',
+        data: sz_hao2
+    }],
+	color:['#336699']
+};
+myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart3'));
+var sz_qishu2 = $("#d_qishu2").text().split(",").reverse();
+var sz_hao3 = $("#d_hao3").text().split(",").reverse();
+option = {
+    title: {
+        text: '百位',
+		left: 'center'
+    },
+    xAxis: {
+		name:'',
+        type: 'value',
+		max:9,//X轴最大值
+		splitNumber:10//分成几段
+    },
+    yAxis: {
+		name:' ',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu2
+    },
+    series: [{
+        name: '球3',
+		symbol:'circle',
+		symbolSize:'17',
+		label: {
+			normal: {
+				show: true,
+				position: 'insideBottom'
+			}
+		},
+        type: 'line',
+        data: sz_hao3
+    }],
+	color:['#749f83']
+};
+myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart4'));
+var sz_qishu2 = $("#d_qishu2").text().split(",").reverse();
+var sz_hao4 = $("#d_hao4").text().split(",").reverse();
+option = {
+    title: {
+        text: '十位',
+		left: 'center'
+    },
+    xAxis: {
+		name:'',
+        type: 'value',
+		max:9,//X轴最大值
+		splitNumber:10//分成几段
+    },
+    yAxis: {
+		name:' ',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu2
+    },
+    series: [{
+        name: '球4',
+		symbol:'circle',
+		symbolSize:'17',
+		label: {
+			normal: {
+				show: true,
+				position: 'insideBottom'
+			}
+		},
+        type: 'line',
+        data: sz_hao4
+    }],
+	color:['#2f4554']
+};
+myChart.setOption(option);
+</script>
+
+
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('mainchart5'));
+var sz_qishu2 = $("#d_qishu2").text().split(",").reverse();
+var sz_hao5 = $("#d_hao5").text().split(",").reverse();
+option = {
+    title: {
+        text: '个位',
+		left: 'center'
+    },
+    xAxis: {
+		name:'',
+        type: 'value',
+		max:9,//X轴最大值
+		splitNumber:10//分成几段
+    },
+    yAxis: {
+		name:' ',
+		type: 'category',
+        boundaryGap: false,
+       	data: sz_qishu2
+    },
+    series: [{
+        name: '球5',
+		symbol:'circle',
+		symbolSize:'17',
+		label: {
+			normal: {
+				show: true,
+				position: 'insideBottom'
+			}
+		},
+        type: 'line',
+        data: sz_hao5
+    }],
+	color:['#ca8622']
+};
+myChart.setOption(option);
+</script>
+		</div>
+		<div class="clear"></div>
+		
+	</div>
+</div>
+{template footer}

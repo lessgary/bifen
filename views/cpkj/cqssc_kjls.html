@@ -1,0 +1,182 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000  ">
+		{template cqssc_com_nav}
+		<div class="sub_r_bot history">
+			<div class="sub_bot_one"> <span class="sub_bot_bt">重庆时时彩 开奖记录</span> <span class="r">开奖日期:&nbsp;&nbsp;
+				<input class="sub_rili Wdate  date" type="text" id="datetimepicker" value="">
+				<a href="javascript:void(0); " class="g_button btn_orange rili_submit">查询更多</a></span>
+			</div>
+		</div>
+		
+		
+		<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/jquery.datetimepicker.css" />
+		<script type="text/javascript" src="{SITE_THEME}images/jquery.datetimepicker.js"></script> 
+		<script>
+		$('#datetimepicker').datetimepicker({
+			yearOffset:0,
+			lang:'ch',
+			timepicker:false,
+			format:'Y-m-d',
+			formatDate:'Y-m-d'
+		});
+		</script>
+		
+		<style>
+            .show_hm td label { margin-right: 5px; }
+            .chdball td span { width: 60px; display: block; float: left; }
+            .KLSF_show_tp td label { margin-right: 5px; }
+        </style>
+		<table id="" class="sub_table g_w1000 chdball g_hide" style="display: table;">
+			<tbody>
+				<tr class="show_hm">
+					<td style="width: 100px;"><strong>查看号码分布：</strong></td>
+					<td style="text-align: left;"><span>
+						<input type="checkbox" data_val="0" name="checkbox" id="ball0">
+						<label for="ball0">号码0</label>
+						</span> <span>
+						<input type="checkbox" data_val="1" name="checkbox" id="ball1">
+						<label for="ball1">号码1</label>
+						</span> <span>
+						<input type="checkbox" data_val="2" name="checkbox" id="ball2">
+						<label for="ball2">号码2</label>
+						</span> <span>
+						<input type="checkbox" data_val="3" name="checkbox" id="ball3">
+						<label for="ball3">号码3</label>
+						</span> <span>
+						<input type="checkbox" data_val="4" name="checkbox" id="ball4">
+						<label for="ball4">号码4</label>
+						</span> <span>
+						<input type="checkbox" data_val="5" name="checkbox" id="ball5">
+						<label for="ball5">号码5</label>
+						</span> <span>
+						<input type="checkbox" data_val="6" name="checkbox" id="ball6">
+						<label for="ball6">号码6</label>
+						</span> <span>
+						<input type="checkbox" data_val="7" name="checkbox" id="ball7">
+						<label for="ball7">号码7</label>
+						</span> <span>
+						<input type="checkbox" data_val="8" name="checkbox" id="ball8">
+						<label for="ball8">号码8</label>
+						</span> <span>
+						<input type="checkbox" data_val="9" name="checkbox" id="ball9">
+						<label for="ball9">号码9</label>
+						</span> <span>
+						<input type="checkbox" data_val="10" name="checkbox" id="ball10" style="display: none;">
+						<label for="ball10" style="display: none;">号码10</label>
+						</span> <span>
+						<input type="checkbox" data_val="11" name="checkbox" id="ball11" style="display: none;">
+						<label for="ball11" style="display: none;">号码11</label>
+						</span> <span>
+						<input type="checkbox" data_val="12" name="checkbox" id="ball12" style="display: none;">
+						<label for="ball12" style="display: none;">号码12</label>
+						</span> <span>
+						<input type="checkbox" data_val="13" name="checkbox" id="ball13" style="display: none;">
+						<label for="ball13" style="display: none;">号码13</label>
+						</span> <span>
+						<input type="checkbox" data_val="14" name="checkbox" id="ball14" style="display: none;">
+						<label for="ball14" style="display: none;">号码14</label>
+						</span> <span>
+						<input type="checkbox" data_val="15" name="checkbox" id="ball15" style="display: none;">
+						<label for="ball15" style="display: none;">号码15</label>
+						</span> <span>
+						<input type="checkbox" data_val="16" name="checkbox" id="ball16" style="display: none;">
+						<label for="ball16" style="display: none;">号码16</label>
+						</span> <span>
+						<input type="checkbox" data_val="17" name="checkbox" id="ball17" style="display: none;">
+						<label for="ball17" style="display: none;">号码17</label>
+						</span> <span>
+						<input type="checkbox" data_val="18" name="checkbox" id="ball18" style="display: none;">
+						<label for="ball18" style="display: none;">号码18</label>
+						</span> <span>
+						<input type="checkbox" data_val="19" name="checkbox" id="ball19" style="display: none;">
+						<label for="ball19" style="display: none;">号码19</label>
+						</span> <span>
+						<input type="checkbox" data_val="20" name="checkbox" id="ball20" style="display: none;">
+						<label for="ball20" style="display: none;">号码20</label>
+						</span> <span style="margin-left: 20px; width: 60px; display: block; float: left;"> <a onclick="clearShade(this, false)" style="color: red" href="javascript:void(0);">还原</a> </span></td>
+				</tr>
+				<tr class="show_tp">
+					<td><strong>大小单双分布：</strong></td>
+					<td style="text-align: left;"><span>
+						<input type="checkbox" id="d" date_oe="o" name="o">
+						<label for="d">单</label>
+						</span> <span>
+						<input type="checkbox" id="s" date_oe="e" name="e">
+						<label for="s">双</label>
+						</span> <span>|</span> <span>
+						<input type="checkbox" id="da" date_bs="b" name="b">
+						<label for="da">大</label>
+						</span> <span>
+						<input type="checkbox" id="xiao" date_bs="s" name="s">
+						<label for="xiao">小</label>
+						</span> <span><span style="margin-left: 20px;"> <a onclick="clearShade(this, false)" style="color: red" href="javascript:void(0);">还原</a> </span></span>
+						<style>
+                        .show_tp em { border: #808080 solid 1px; width: 70px; height: 22px; line-height: 22px; text-align: center; display: inline-block; margin-right: 5px; margin-left: 5px; }
+                        .show_tp em { border-radius: 5px; cursor: pointer; color: #808080; }
+                        .show_tp em:hover { background-color: #d3d1d1; }
+                        .show_tp em.on { background-color: #F68D1D; color: #fff; font-weight: bold; }
+                    </style>
+						<em onclick="checkDuizi();" id="chkduizi" class="" style="display: none;">查看对子号</em></td>
+				</tr>
+			</tbody>
+		</table>
+		<table width="100%" cellspacing="0" cellpadding="0" border="0" class="sub_table">
+			<thead>
+				<tr id="th_header">
+					<th width="163" class="">时间 </th>
+					<th width="103" class="">期数 </th>
+					<th width="380" class="">开奖号码 </th>
+					<th class="" colspan="3">总和</th>
+					<th colspan="1">龙虎</th>
+				</tr>
+			</thead>
+			<tbody linnos="0,1,2,5" id="reslist">
+				{php
+			$day = isset($_GET['day']) ? $_GET['day']:date('Y-m-d',time());
+			}
+				{php
+
+				$con = mysqli_connect("localhost","root","new-password","kjwang23dmei");
+				$sql = "select * from fn_content_1_cqssc where opentime like '%$year%'  ORDER BY `id` DESC";
+				$res = mysqli_query($con,$sql);
+				$list = array();
+				while($row=mysqli_fetch_assoc($res))
+				$list[] = $row;
+
+				foreach($list as $res) {
+				$a = explode(',',$res['opencode']);
+
+				}
+					{php $a = explode(',',$res['opencode']);}
+					<tr  {if ($key+1)%2==0}class="line_row"{/if}>
+						<td>{$res['opentime']}</td>
+						<td> {$res['expect']} </td>
+						<td>
+						<span title="{$a[0]}" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[0]}</span>
+						<span title="{$a[1]}" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[1]}</span>
+						<span title="{$a[2]}" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[2]}</span>
+						<span title="{$a[3]}" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[3]}</span>
+						<span title="{$a[4]}" class="  ball_s_ ball_s_blue ball_lenght5  ">{$a[4]}</span>
+						</td>
+						<td class="count">{$a[0]+$a[1]+$a[2]+$a[3]+$a[4]}</td>
+						<td class="{if ($a[1]+$a[1]+$a[2]+$a[3]+$a[4])%2==0}blue{else}gray{/if}">{if ($a[0]+$a[1]+$a[2]+$a[3]+$a[4])%2==0}双{else}单{/if}</td>
+						<td class="{if ($a[1]+$a[1]+$a[2]+$a[3]+$a[4])>=23}blue{else}gray{/if}">{if ($a[0]+$a[1]+$a[2]+$a[3]+$a[4])>=23}大{else}小{/if}</td>
+						<td class="{if $a[1]>$a[4]}blue{else if $a[1]==$a[4]}green{else}gray{/if}">{if $a[0]>$a[4]}龙{else if $a[0]==$a[4]}和{else}虎{/if}</td>
+					</tr>
+				{php } }
+			</tbody>
+		</table>
+		<div class="hisloading" style="display: none;"><img src="{SITE_THEME}images/loading_flash.gif"></div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".rili_submit").click(function(event) {
+            var url = "index.php?c=content&a=list&catid="+{$param['catid']}+"&day="+$(".sub_rili").val();
+            window.location.href=url;
+        });
+    });
+</script> 
+{template footer}

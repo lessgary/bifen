@@ -1,0 +1,477 @@
+{template header}
+<div class="g_w1000min open_form">
+	<div class="g_w1000 ">
+		<div class="sub_right"> {template cqssc_com_nav} </div>
+		
+		<div class="sub_r_bot history">
+			<div class="sub_bot_one"> <span class="sub_bot_bt">重庆时时彩：基本走势</span> <span class="r">开奖日期:&nbsp;&nbsp;
+				<input class="sub_rili Wdate  date" type="text" id="datetimepicker" value="">
+				<a class="g_button btn_orange rili_submit" href="javascript:void(0); ">查询更多</a></span>
+			</div>
+		</div>
+		<link rel="stylesheet" type="text/css" href="{SITE_THEME}images/jquery.datetimepicker.css" />
+		<script type="text/javascript" src="{SITE_THEME}images/jquery.datetimepicker.js"></script> 
+		<script>
+		$('#datetimepicker').datetimepicker({
+			yearOffset:0,
+			lang:'ch',
+			timepicker:false,
+			format:'Y-m-d',
+			formatDate:'Y-m-d'
+		});
+		</script>
+
+<style>
+        .lot-table tbody tr td { height: 21px; }
+        .yilou { color: #decdd7; }
+        .ball1 { background: url({SITE_THEME}images/t1.png) #fff no-repeat center center; color: #fff; font-weight: bold; }
+        .ball2 { background: url({SITE_THEME}images/t2.png) #fff no-repeat center center; color: #fff; font-weight: bold; }
+        .ball3 { background: url({SITE_THEME}images/t3.png) #fff no-repeat center center; color: #fff; font-weight: bold; }
+        .ball4 { background: url({SITE_THEME}images/t5.png) #fff no-repeat center center; color: #fff; font-weight: bold; }
+        .ball5 { background: url({SITE_THEME}images/t6.png) #fff no-repeat center center; color: #fff; font-weight: bold; }
+        .tips { width: 978px; border: solid 1px #fed22f; background-color: #fff0a5; text-align: left; color: #0089ff; line-height: 25px; padding-left: 25px; clear: both; }
+    </style>
+
+<div class="g_w1000 ">
+    <div class="content" style="margin-top: 0px;">
+        <div style="float: left; padding-left: 20px; /**/" id="times-show" class="tips">
+            <label>标注形式选择：</label>
+            <input type="checkbox" id="yl" checked="checked" style="padding-right: 10px; cursor: pointer;" />
+            <label for="yl" style="padding-right: 10px; cursor: pointer;">遗漏</label>&nbsp;&nbsp;
+            <input type="checkbox" id="zx" checked="checked" style="padding-right: 10px; cursor: pointer;" onclick="canvas_sh()" />
+            <label for="zx" style="padding-right: 10px; cursor: pointer;" onclick="canvas_sh()">折线</label>&nbsp;&nbsp;
+            <input type="checkbox" id="fgx"  style="padding-right: 10px; cursor: pointer;" onclick="FenGeXian('fgx','tb2')" />
+            <label for="fgx" style="padding-right: 10px; cursor: pointer;">分隔线</label>
+        </div>
+        <div class="g_clear"></div>
+        <div class="cont_box " style="position: relative">
+            <div id="mycanvas">
+            </div>
+            <table class="lot-table" id="nav" style="display: none; z-index: 9999; width: 1000px;">
+                <colgroup>
+                    <col style="width: 80px;" />
+                    <col style="width: 68px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                </colgroup>
+                <thead style="height: 40px; background-color: #ECECEC;">
+                    <tr>
+                        <td rowspan="2">期号</td>
+                        <td rowspan="2">开奖号码</td>
+                        <td colspan="10">万位（第一球)</td>
+                        <td colspan="10">千位（第二球)</td>
+                        <td colspan="10">百位（第三球)</td>
+                        <td colspan="10">十位（第四球)</td>
+                        <td colspan="10">个位（第五球)</td>
+                    </tr>
+                    <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+
+                    </tr>
+                </thead>
+            </table>
+            <table class="lot-table" id="tb2">
+                <colgroup>
+                    <col style="width: 80px;" />
+                    <col style="width: 68px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                        <col style="width: 17px;" />
+                </colgroup>
+                <thead style="height: 40px; background-color: #ECECEC;">
+                    <tr>
+                        <td rowspan="2">期号</td>
+                        <td rowspan="2">开奖号码</td>
+                        <td colspan="10">万位（第一球)</td>
+                        <td colspan="10">千位（第二球)</td>
+                        <td colspan="10">百位（第三球)</td>
+                        <td colspan="10">十位（第四球)</td>
+                        <td colspan="10">个位（第五球)</td>
+                    </tr>
+                    <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+
+                    </tr>
+                </thead>
+
+                <tbody id="getResult">
+
+{php $i1=1; $i2=1; $i3=1; $i4=1; $i5=1; $i6=1; $i7=1; $i8=1; $i9=1; $i10=1;}
+{php $c1=0; $c2=0; $c3=0; $c4=0; $c5=0; $c6=0; $c7=0; $c8=0; $c9=0; $c10=0;}
+{php $qi1=1; $qi2=1; $qi3=1; $qi4=1; $qi5=1; $qi6=1; $qi7=1; $qi8=1; $qi9=1; $qi10=1;}
+{php $qc1=0; $qc2=0; $qc3=0; $qc4=0; $qc5=0; $qc6=0; $qc7=0; $qc8=0; $qc9=0; $qc10=0;}
+{php $bi1=1; $bi2=1; $bi3=1; $bi4=1; $bi5=1; $bi6=1; $bi7=1; $bi8=1; $bi9=1; $bi10=1;}
+{php $bc1=0; $bc2=0; $bc3=0; $bc4=0; $bc5=0; $bc6=0; $bc7=0; $bc8=0; $bc9=0; $bc10=0;}
+{php $si1=1; $si2=1; $si3=1; $si4=1; $si5=1; $si6=1; $si7=1; $si8=1; $si9=1; $si10=1;}
+{php $sc1=0; $sc2=0; $sc3=0; $sc4=0; $sc5=0; $sc6=0; $sc7=0; $sc8=0; $sc9=0; $sc10=0;}
+{php $gi1=1; $gi2=1; $gi3=1; $gi4=1; $gi5=1; $gi6=1; $gi7=1; $gi8=1; $gi9=1; $gi10=1;}
+{php $gc1=0; $gc2=0; $gc3=0; $gc4=0; $gc5=0; $gc6=0; $gc7=0; $gc8=0; $gc9=0; $gc10=0;}
+{php
+	$day = isset($_GET['day']) ? $_GET['day']:date('Y-m-d',time());
+}
+{list catid=$parentid LIKEopentime=%$day% pagesize=500 more=1 order=id}
+{php $a = explode(',',$t['opencode']);}
+		<tr>
+			<td style="background-color: #fff;">{$t['expect']}</td>
+        	<td style="background-color: #F5F5F5; color: rgb(255, 159, 96); font-weight: bold;">{$a[0]},{$a[1]},{$a[2]},{$a[3]},{$a[4]}</td>
+            <td style="background-color: #F2E6FF;" class="{if $a[0]==0}ball1{else}yilou{/if}">{if $a[0]==0}{php $i1=1;}{$a[0]}{php $c1++;}{else}{$i1}{php $i1++;}{/if}</td>
+            <td style="background-color: #F2E6FF;" class="{if $a[0]==1}ball1{else}yilou{/if}">{if $a[0]==1}{php $i2=1;}{$a[0]}{php $c2++;}{else}{$i2}{php $i2++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==2}ball1{else}yilou{/if}">{if $a[0]==2}{php $i3=1;}{$a[0]}{php $c3++;}{else}{$i3}{php $i3++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==3}ball1{else}yilou{/if}">{if $a[0]==3}{php $i4=1;}{$a[0]}{php $c4++;}{else}{$i4}{php $i4++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==4}ball1{else}yilou{/if}">{if $a[0]==4}{php $i5=1;}{$a[0]}{php $c5++;}{else}{$i5}{php $i5++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==5}ball1{else}yilou{/if}">{if $a[0]==5}{php $i6=1;}{$a[0]}{php $c6++;}{else}{$i6}{php $i6++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==6}ball1{else}yilou{/if}">{if $a[0]==6}{php $i7=1;}{$a[0]}{php $c7++;}{else}{$i7}{php $i7++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==7}ball1{else}yilou{/if}">{if $a[0]==7}{php $i8=1;}{$a[0]}{php $c8++;}{else}{$i8}{php $i8++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==8}ball1{else}yilou{/if}">{if $a[0]==8}{php $i9=1;}{$a[0]}{php $c9++;}{else}{$i9}{php $i9++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[0]==9}ball1{else}yilou{/if}">{if $a[0]==9}{php $i10=1;}{$a[0]}{php $c10++;}{else}{$i10}{php $i10++;}{/if}</td>
+			
+            <td style="background-color: #F9F4DF;" class="{if $a[1]==0}ball2{else}yilou{/if}">{if $a[1]==0}{php $qi1=1;}{$a[1]}{php $qc1++;}{else}{$qi1}{php $qi1++;}{/if}</td>
+            <td style="background-color: #F9F4DF;" class="{if $a[1]==1}ball2{else}yilou{/if}">{if $a[1]==1}{php $qi2=1;}{$a[1]}{php $qc2++;}{else}{$qi2}{php $qi2++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==2}ball2{else}yilou{/if}">{if $a[1]==2}{php $qi3=1;}{$a[1]}{php $qc3++;}{else}{$qi3}{php $qi3++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==3}ball2{else}yilou{/if}">{if $a[1]==3}{php $qi4=1;}{$a[1]}{php $qc4++;}{else}{$qi4}{php $qi4++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==4}ball2{else}yilou{/if}">{if $a[1]==4}{php $qi5=1;}{$a[1]}{php $qc5++;}{else}{$qi5}{php $qi5++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==5}ball2{else}yilou{/if}">{if $a[1]==5}{php $qi6=1;}{$a[1]}{php $qc6++;}{else}{$qi6}{php $qi6++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==6}ball2{else}yilou{/if}">{if $a[1]==6}{php $qi7=1;}{$a[1]}{php $qc7++;}{else}{$qi7}{php $qi7++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==7}ball2{else}yilou{/if}">{if $a[1]==7}{php $qi8=1;}{$a[1]}{php $qc8++;}{else}{$qi8}{php $qi8++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==8}ball2{else}yilou{/if}">{if $a[1]==8}{php $qi9=1;}{$a[1]}{php $qc9++;}{else}{$qi9}{php $qi9++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[1]==9}ball2{else}yilou{/if}">{if $a[1]==9}{php $qi10=1;}{$a[1]}{php $qc10++;}{else}{$qi10}{php $qi10++;}{/if}</td>
+			
+            <td style="background-color: #F2E6FF;" class="{if $a[2]==0}ball3{else}yilou{/if}">{if $a[2]==0}{php $bi1=1;}{$a[2]}{php $bc1++;}{else}{$bi1}{php $bi1++;}{/if}</td>
+            <td style="background-color: #F2E6FF;" class="{if $a[2]==1}ball3{else}yilou{/if}">{if $a[2]==1}{php $bi2=1;}{$a[2]}{php $bc2++;}{else}{$bi2}{php $bi2++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==2}ball3{else}yilou{/if}">{if $a[2]==2}{php $bi3=1;}{$a[2]}{php $bc3++;}{else}{$bi3}{php $bi3++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==3}ball3{else}yilou{/if}">{if $a[2]==3}{php $bi4=1;}{$a[2]}{php $bc4++;}{else}{$bi4}{php $bi4++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==4}ball3{else}yilou{/if}">{if $a[2]==4}{php $bi5=1;}{$a[2]}{php $bc5++;}{else}{$bi5}{php $bi5++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==5}ball3{else}yilou{/if}">{if $a[2]==5}{php $bi6=1;}{$a[2]}{php $bc6++;}{else}{$bi6}{php $bi6++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==6}ball3{else}yilou{/if}">{if $a[2]==6}{php $bi7=1;}{$a[2]}{php $bc7++;}{else}{$bi7}{php $bi7++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==7}ball3{else}yilou{/if}">{if $a[2]==7}{php $bi8=1;}{$a[2]}{php $bc8++;}{else}{$bi8}{php $bi8++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==8}ball3{else}yilou{/if}">{if $a[2]==8}{php $bi9=1;}{$a[2]}{php $bc9++;}{else}{$bi9}{php $bi9++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[2]==9}ball3{else}yilou{/if}">{if $a[2]==9}{php $bi10=1;}{$a[2]}{php $bc10++;}{else}{$bi10}{php $bi10++;}{/if}</td>
+			
+            <td style="background-color: #F9F4DF;" class="{if $a[3]==0}ball4{else}yilou{/if}">{if $a[3]==0}{php $si1=1;}{$a[3]}{php $sc1++;}{else}{$si1}{php $si1++;}{/if}</td>
+            <td style="background-color: #F9F4DF;" class="{if $a[3]==1}ball4{else}yilou{/if}">{if $a[3]==1}{php $si2=1;}{$a[3]}{php $sc2++;}{else}{$si2}{php $si2++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==2}ball4{else}yilou{/if}">{if $a[3]==2}{php $si3=1;}{$a[3]}{php $sc3++;}{else}{$si3}{php $si3++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==3}ball4{else}yilou{/if}">{if $a[3]==3}{php $si4=1;}{$a[3]}{php $sc4++;}{else}{$si4}{php $si4++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==4}ball4{else}yilou{/if}">{if $a[3]==4}{php $si5=1;}{$a[3]}{php $sc5++;}{else}{$si5}{php $si5++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==5}ball4{else}yilou{/if}">{if $a[3]==5}{php $si6=1;}{$a[3]}{php $sc6++;}{else}{$si6}{php $si6++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==6}ball4{else}yilou{/if}">{if $a[3]==6}{php $si7=1;}{$a[3]}{php $sc7++;}{else}{$si7}{php $si7++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==7}ball4{else}yilou{/if}">{if $a[3]==7}{php $si8=1;}{$a[3]}{php $sc8++;}{else}{$si8}{php $si8++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==8}ball4{else}yilou{/if}">{if $a[3]==8}{php $si9=1;}{$a[3]}{php $sc9++;}{else}{$si9}{php $si9++;}{/if}</td>
+			<td style="background-color: #F9F4DF;" class="{if $a[3]==9}ball4{else}yilou{/if}">{if $a[3]==9}{php $si10=1;}{$a[3]}{php $sc10++;}{else}{$si10}{php $si10++;}{/if}</td>
+			
+            <td style="background-color: #F2E6FF;" class="{if $a[4]==0}ball5{else}yilou{/if}">{if $a[4]==0}{php $gi1=1;}{$a[4]}{php $gc1++;}{else}{$gi1}{php $gi1++;}{/if}</td>
+            <td style="background-color: #F2E6FF;" class="{if $a[4]==1}ball5{else}yilou{/if}">{if $a[4]==1}{php $gi2=1;}{$a[4]}{php $gc2++;}{else}{$gi2}{php $gi2++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==2}ball5{else}yilou{/if}">{if $a[4]==2}{php $gi3=1;}{$a[4]}{php $gc3++;}{else}{$gi3}{php $gi3++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==3}ball5{else}yilou{/if}">{if $a[4]==3}{php $gi4=1;}{$a[4]}{php $gc4++;}{else}{$gi4}{php $gi4++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==4}ball5{else}yilou{/if}">{if $a[4]==4}{php $gi5=1;}{$a[4]}{php $gc5++;}{else}{$gi5}{php $gi5++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==5}ball5{else}yilou{/if}">{if $a[4]==5}{php $gi6=1;}{$a[4]}{php $gc6++;}{else}{$gi6}{php $gi6++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==6}ball5{else}yilou{/if}">{if $a[4]==6}{php $gi7=1;}{$a[4]}{php $gc7++;}{else}{$gi7}{php $gi7++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==7}ball5{else}yilou{/if}">{if $a[4]==7}{php $gi8=1;}{$a[4]}{php $gc8++;}{else}{$gi8}{php $gi8++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==8}ball5{else}yilou{/if}">{if $a[4]==8}{php $gi9=1;}{$a[4]}{php $gc9++;}{else}{$gi9}{php $gi9++;}{/if}</td>
+			<td style="background-color: #F2E6FF;" class="{if $a[4]==9}ball5{else}yilou{/if}">{if $a[4]==9}{php $gi10=1;}{$a[4]}{php $gc10++;}{else}{$gi10}{php $gi10++;}{/if}</td>
+    	</tr>
+{/list}
+<tr>
+<td colspan="2">累计总次数</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c1}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c2}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c3}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c4}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c5}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c6}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c7}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c8}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c9}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$c10}</td>
+
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc1}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc2}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc3}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc4}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc5}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc6}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc7}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc8}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc9}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$qc10}</td>
+
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc1}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc2}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc3}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc4}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc5}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc6}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc7}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc8}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc9}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$bc10}</td>
+
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc1}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc2}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc3}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc4}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc5}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc6}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc7}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc8}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc9}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$sc10}</td>
+
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc1}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc2}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc3}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc4}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc5}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc6}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc7}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc8}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc9}</td>
+<td style="background:#a1120a; color: #fff; font-weight:700">{$gc10}</td>
+</tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+<script src="{SITE_THEME}images/canvas.js"></script>
+<script>
+canvasChecked('ball1', 'green');
+canvasChecked('ball2', '#A65D00');
+canvasChecked('ball3', 'blue');
+canvasChecked('ball4', '#413106');
+canvasChecked('ball5', '#EA740A');
+canvas_sh();
+
+function FenGeXian(a, b) {
+	$("#" + b + " tr").each(function(index) {
+		if (index % 10 == 0 && index != 0) {
+			if ($("#" + a).prop("checked") == true) {
+				$(this).addClass("g_fenggexian");
+			} else {
+				$(this).removeClass("g_fenggexian");
+			}
+		}
+	});
+}
+
+function canvas_sh() {
+	if ($("#zx").prop("checked") == true) {
+		$("canvas").css("visibility", "visible");
+	} else {
+		$("canvas").css("visibility", "hidden");
+	}
+}
+$("#yl").click(function() {
+	if ($("#yl").prop("checked") == false) {
+		$(".lot-table tbody .yilou").each(function() {
+			var bgc = $(this).css("background-color");
+			$(this).css("color", bgc)
+		});
+	} else {
+		$(".lot-table tbody .yilou").css("color", "#decdd7");
+	}
+});
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".rili_submit").click(function(event) {
+            var url = "index.php?c=content&a=list&catid="+{$param['catid']}+"&day="+$(".sub_rili").val();
+            window.location.href=url;
+        });
+    });
+</script> 
+{template footer}
